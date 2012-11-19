@@ -150,12 +150,23 @@ table {
 /* Global Styles ============================================================================ */
 html {
 	font-family: 'droid_sansregular';
+	font-size: 10px;
 }
 
 body {
 	background: url("../images/pinstriped_suit.png");
 }
 
+/* Links */
+a {
+	color: #333333;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+/* Blue Background */
 #container {
 	width: 960px;
 	margin: 0 auto;
@@ -163,14 +174,18 @@ body {
 	background-color: #003366;
 }
 
+/* White Background */
 #main {
 	background-color: #f7f7f7;
 }
 
+/* Content Columns */
 .main_column, aside {
 	padding: 0 40px;
 }
 
+
+/* Divders for content on a page */
 h3 {
 	border-bottom: 8px solid #333333;
 }
@@ -186,20 +201,19 @@ h3 {
 }
 
 
-
 /* Header Styles ============================================================================ */
 header {
 	overflow: hidden;
 }
 
 h1 {
-	padding: 10px 40px 20px;
+	padding: 20px 40px;
 	float: left;
 }
 
 h1 a {
 	width: 400px;
-	height: 61px;
+	height: 45px;
 	display: block;
 	overflow: hidden;
 	text-indent: -9999px;
@@ -212,8 +226,21 @@ nav {
 }
 
 nav a {
-	padding: 40px 20px;
+	margin: 0 15px 30px;
+	padding-top: 30px;
+	font-size: 2em;
+	font-family: 'droid_sansbold';
+	border-top: 8px solid #f7f7f7;
 	float: left;
 	display: block;
+	text-decoration: none;
 }
+
+.active {
+	border-top: 8px solid #003366;
+}
+
+
+
+
 
