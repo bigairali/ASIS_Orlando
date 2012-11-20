@@ -122,17 +122,15 @@ table {
 
 
 /* Global Styles ============================================================================ */
-html {
-	font-family: 'droid_sansregular';
-	font-size: 10px;
-}
 
 body {
 	background: url("../images/pinstriped_suit.png");
+	font-family: 'droid_sansregular';
+	font-size: 10px;
+
 }
 
 p {
-/* 	font-size: 1.6em; */
 	letter-spacing: 0.1em;
 	line-height: 1.7em;
 }
@@ -169,7 +167,6 @@ a:hover {
 	padding-left: 40px;
 	padding-right: 30px;
 	width: 528px;
-	font-size: 1.6em;
 	float: left;
 }
 
@@ -177,11 +174,17 @@ aside {
 	padding-left: 30px;
 	padding-right: 40px;
 	width: 292px;
-	font-size: 1.4em;
 	float: left;
 }
 
 /* Font Sizing */
+.main_column p {
+	font-size: 1.6em;
+}
+
+aside p {
+	font-size: 1.4em;
+}
 
 
 
@@ -192,7 +195,7 @@ h2, h3 {
 
 	/* Current Page */
 h2 {
-	font-size: 2.2em;
+	font-size: 2.9em;
 	font-family: 'droid_sansbold';
 }
 
@@ -205,19 +208,21 @@ h4 {
 	/* Posted by header */
 .post-author {
 	padding-top: 5px;
-	color: #006699;
+	color: #bababa;
 	font-family: 'droid_sansregular';
-	font-size: 0.5em;
+	font-size: 11px;
+	line-height: 1em;
+	letter-spacing: 0;
 	display: block;
 }
 
 	/* Titled Sections */
 .title-section {
 	padding: 8px;
-	padding-bottom: 2px;
+	padding-bottom: 0;
 	background: #333333;
 	color: #f7f7f7;
-	font-family: sans-serif;
+	font-family: 'droid_sansbold';
 	font-size: 14px;
 	display: inline-block;
 }
@@ -268,12 +273,58 @@ nav a {
 }
 
 
-
-
-
 /* Board of directors Styles ============================================================================ */
 #directors {
-	clear: both;
+	margin-top: 60px;
+	padding: 0 40px 60px;
+	overflow: hidden;
+	letter-spacing: 0;
 }
+
+#directors > ul {
+	margin-left: 20px;
+	width: 205px;
+	float: left;
+
+}
+
+#directors > ul:first-child {
+	margin-left: 0;
+}
+
+.name, .phone_number, .email_address, .work {
+	letter-spacing: 0;
+	line-height: 1.3em;	
+	font-size: 1.4em;
+}
+
+.position {
+	color: #B55600;
+	font-family: 'droid_sansbold';
+	font-size: 1.6em;
+}
+
+.name {
+	font-size: 2em;
+	font-family: 'droid_serifregular';
+}
+
+#directors .post-author, .email_address {
+	margin-bottom: 10px;
+}
+
+.work {
+	font-size: 1.2em;
+}
+
+h4 {
+	letter-spacing: 0;
+	line-height: 1.2em;	
+}
+
+
+
+
+
 
 
