@@ -342,8 +342,6 @@ h4 {
 
 /* Side Column Styles ============================================================================ */
 
-
-
 .member {
 	margin-top: 20px;
 	padding: 10px;
@@ -363,7 +361,27 @@ h4 {
 	text-decoration: none;
 }
 
+aside > h4 {
+	font-size: 1.8em;
+}
 
+.upcoming-date {
+	padding: 2px 4px;
+	margin-right: 5px;
+	background: #333333;
+	color: #f7f7f7;
+	font-family: 'droid_sansbold';
+	font-size: 0.8em;
+	letter-spacing: 0.1em;
+	display: inline-block;
+	position: relative;
+	top: -2px;
+}
+
+	/* If there is an img in front of an H4, have less margin-top */
+img + h4 {
+	margin-top: 10px;
+}
 
 
 
