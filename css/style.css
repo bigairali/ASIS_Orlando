@@ -226,7 +226,7 @@ h4 {
 	/* Posted by header */
 .post-author {
 	padding-top: 5px;
-	color: #bababa;
+	color: #9b9b9b;
 	font-family: 'droid_sansregular';
 	font-size: 11px;
 	line-height: 1em;
@@ -346,8 +346,8 @@ nav a:hover {
 }
 
 .name {
-	font-size: 2em;
-	font-family: 'droid_serifregular';
+	font-size: 1.8em;
+	font-family: 'droid_serifbold';
 }
 
 #directors .post-author, .email_address {
@@ -397,6 +397,10 @@ aside ul li {
 	margin-bottom: 5px;
 }
 
+aside ul {
+	margin-bottom: 40px;
+}
+
 aside ul li > p {
 	font-size: 1.1em;
 	line-height: 1.4em;
@@ -434,6 +438,30 @@ img + h4 {
 	margin: 0 auto;
 	display: block;
 }
+
+
+/* Blockquote Styles ============================================================================ */
+blockquote {
+	border-bottom: 1px solid #484141;
+	border-top: 1px solid #484141;	
+	margin-top: 40px;
+	padding: 40px 175px 30px;
+	background: #f0f0f0;
+	background-image: url('../images/quote.png');
+	background-repeat: no-repeat;
+	background-position: 160px 30px;
+	font-family: 'droid_serifregular';
+	font-size: 2.2em;
+	text-align: center;
+}
+
+cite {
+	padding-top: 15px;
+	font-size: 0.7em;
+	text-align: right;
+	display: block;
+}
+
 
 
 /* Links Page Styles ============================================================================ */
