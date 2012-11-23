@@ -272,7 +272,7 @@ h1 {
 
 h1 a {
 	width: 400px;
-	height: 45px;
+	height: 60px;
 	display: block;
 	overflow: hidden;
 	text-indent: -9999px;
@@ -286,7 +286,7 @@ nav {
 
 nav a {
 	margin: 0 15px 30px;
-	padding-top: 25px;
+	padding-top: 35px;
 	font-size: 2em;
 	font-family: 'droid_sansbold';
 	border-top: 8px solid #f7f7f7;
@@ -447,19 +447,31 @@ footer {
 footer h5 {
 	margin-bottom: 5px;
 	padding-bottom: 2px;
+	color: #709FB3;
 	font-size: 1.4em;
 	line-height: 1em;
 	border-bottom: 2px solid #709FB3;
 }
 
 footer p, footer div, footer a {
-	color: #709FB3;
+
 	font-size: 1.1em;
 	letter-spacing: 0;
 	line-height: 1em;
 }
 
+
+footer p, footer div {
+	color: #709FB3;
+}
+	
+
+footer a {
+	color: #f7f7f7;
+}
+
 footer div {
+	margin-right: 20px;
 	width: 205px;
 	float: left;
 }
@@ -469,7 +481,7 @@ footer p:first-child {
 }
 
 .social_link {
-	color: #f7f7f7;
+	color: #efefef;
 	font-size: 1.2em;
 	line-height: 1em;
 }
@@ -478,8 +490,8 @@ footer p:first-child {
 	margin-bottom: 5px;
 }
 
-.services li a:hover {
-	color: #f7f7f7;
+.services li a:hover, .social_link:hover {
+	color: #B55600;
 }
 
 .international {
