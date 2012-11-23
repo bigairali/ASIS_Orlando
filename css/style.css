@@ -393,15 +393,8 @@ aside > h4 {
 	font-size: 1.8em;
 }
 
-aside ul {
-	font-size: 1.4em;
-	letter-spacing: 0.1em;
-	line-height: 1.5em;
-}
-
 aside ul li {
 	margin-bottom: 5px;
-	overflow: hidden;
 }
 
 aside ul li > p {
@@ -410,8 +403,9 @@ aside ul li > p {
 }
 
 aside ul li > span {
-	width: 50px;
+	width: 40px;
 	font-family: 'droid_sansbold';
+	font-size: 1.3em;
 	display: block;
 	float: left;
 }
@@ -433,6 +427,55 @@ aside ul li > span {
 img + h4 {
 	margin-top: 10px;
 }
+
+.links_logo {
+	width: 224px;
+	height: 142px;
+	margin: 0 auto;
+	display: block;
+}
+
+
+/* Links Page Styles ============================================================================ */
+.security_links {
+	overflow: hidden;
+}
+
+.security_links ul {
+	padding-left: 10px;
+	list-style-image: url('../images/right_arrow.png');
+}
+
+.security_links ul li {
+	overflow: visible;
+}
+
+.left, .right {
+	width: 45%;
+}
+
+.left {
+	float: left;
+}
+
+.right {
+	float: right;
+}
+
+aside .security_links a {
+	font-size: 1.6em;
+}
+
+.security_links a {
+	color: #003366;
+	font-size: 1.3em;
+	line-height: 2em;
+}
+
+.security_links a:hover {
+	color: #B55600;
+}
+
 
 
 
