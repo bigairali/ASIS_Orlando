@@ -152,6 +152,15 @@ p {
 	overflow: hidden;
 }
 
+p > a > img{
+	margin-right: 1.2em; 
+	display: inline-block;
+	float: left;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
 /* div clear */
 .clear {
 	clear: both;
