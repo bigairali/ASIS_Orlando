@@ -2,7 +2,7 @@
 </section><!-- /main -->
 		<footer>
 			<div>
-				<p><?php echo sprintf( __( '%1$s %2$s %3$s. All Rights Reserved.', 'blankslate' ), '&copy;', date('Y'), esc_html(get_bloginfo('name')) ); echo sprintf( __( ' Theme By: %1$s', 'blankslate' ), '<a href="http://www.localitydev.com">TidyThemes</a>' ); ?></p>
+				<p><?php echo sprintf( __( '%1$s %2$s %3$s. All Rights Reserved.', 'blankslate' ), '&copy;', date('Y'), esc_html(get_bloginfo('name')) ); echo '<br>'.sprintf( __( ' Theme By: %1$s', 'blankslate' ), '<a href="http://www.localitydev.com">Chris J. Whitman</a>' ); ?></p>
 				
 				<p>Visit us on <a class="social_link" href="">Linkedin</a></p>
 			</div>
