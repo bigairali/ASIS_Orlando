@@ -13,6 +13,7 @@
 					<li><a href="#">Pay Dues</a></li>
 					<li><a href="#">Attend a Meeting</a></li>
 					<li><a href="#">Attend a Luncheon</a></li>
+					<li><a href="wp-admin">Admin</a></li>
 				</ul>
 			</div>
 			
