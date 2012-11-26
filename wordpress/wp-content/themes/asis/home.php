@@ -1,11 +1,21 @@
 
 
 <?php get_header(); ?>		<!-- Get the header of the page and insert it here -->
+<!-- <?php the_post(); ?> -->		<!-- Get the POST's data to use for the page -->
 
 <img src="/asis_images/main_photo.jpg" width="960" height="300" alt="Picture of Lake Eola that represents Orlando" />
 			
 <div class="main_column">
-	<?php $page_id = 17; $page_data = get_page( $page_id ); ?>
+
+	<?php 
+		
+	/* HOMEPAGE page ID number */
+		$page_id = 17; 
+		
+	/* Get the HOMEPAGE data for use */
+		$page_data = get_page( $page_id ); 
+		
+	?>
 	
 	<h2>ASIS Orlando Chapter</h2>
 	<?php echo apply_filters('the_content', $page_data->post_content); ?>
@@ -13,13 +23,20 @@
 	<h3><span class="title-section">Coverage of ASIS News</span></h3>
 	
 	
-	<?php $posts_args = array(
-							'numberposts' => 5,		/* How many posts to pull */
-							'category' => 5			/* ID of Category */
-						); ?>
-	<?php $posts_array = get_posts( $posts_args ); ?>
+	<?php 
+	
+	/* These are the ARGUMENTS for the get_posts PARAM */
+		$posts_args = array(
+						'numberposts' => 5,		/* How many posts to pull */
+						'category' => 5			/* ID of Category */
+						);
+		
+	/* Get an array of posts that match my arguments and put them in my $POSTS_ARRAY variable */
+		$posts_array = get_posts( $posts_args ); 
+	
+	?>
 
-<!--	=== This is and example of what is received from get_posts() ===
+<!--	=== This is an example of what is in the $POSTS_ARRAY variable. ===
 
 array(1) { 
 	[0]=> object(stdClass)#250 (24) { 
@@ -53,7 +70,6 @@ array(1) {
 
 	<?php 
 
-		
 /* For each post in the Coverage of ASIS News category, make a post up to a cap of 5 */
 	foreach($posts_array as $post_value){
 	
@@ -69,18 +85,15 @@ array(1) {
 		<p>'.$post_value->post_content.'</p>
 		</div>';
 		
-	/* Put the post on the website */
+	/* Places the $POST_TEMPLATE onto the page for each POST_VALUE in POST_ARRAY // Max of 5 */
 		echo $post_template;					
 	} ?>
 
 </div>
-
 			
 	<aside>
 		<h3><span class="title-section">Join Our Community</span></h3>
 		<p><?=get_post_meta($page_data->ID, 'join_community', true); ?></p>
-
-<!-- 				<p>Want to be a part of an organization of security professionals? Join ASIS Orlando and have an opportunity to meet other professionals, join meetups, and meet monthly!</p> -->
 		
 		<p><a class="member" href="#">Become a Member</a></p>
 		
@@ -105,23 +118,37 @@ array(1) {
 	
 	<div id="directors">
 		<h3><span class="title-section">Board of Directors</span></h3>
-		
+<!-- 		<?php var_dump($page_data); ?> -->
 		<div class="director_container">
 			<ul>
+				<?php 
+					$chairman_id = 83;							/* Chairman page ID */
+					$chairman_data = get_page($chairman_id);	/* Chairman page data */
+				?>
+			
 				<li class="position">Chairman</li>
-				<li class="name">Doug Sarubbi</li>
-				<li class="post-author">Deputy Sergeant</li>
-				<li class="phone_number">407-351-9368</li>
-				<li class="email_address">doug.sarubbi@ocfl.net</li>
+				<li class="name"><?=get_post_meta($chairman_data->ID, 'full_name', true);?></li>
+				<li class="post-author"><?=get_post_meta($chairman_data->ID, 'title', true);?></li>
+				<li class="phone_number"><?=get_post_meta($chairman_data->ID, 'phone', true);?></li>
+				<li class="email_address"><?=get_post_meta($chairman_data->ID, 'email', true);?></li>
 				<li class="work">
-					<address>Orange County Sheriff's<br />
-					6825 Westwood Blvd.<br />
-					Orlando, Fl. 32821</address>
+					<address><?=get_post_meta($chairman_data->ID, 'workplace', true);?><br/>
+					<?=get_post_meta($chairman_data->ID, 'address', true);?></address>
 				</li>
 			</ul>
 		
 			<ul>
 				<li class="position">Vice Chairman</li>
+				<li class="name"><?=get_post_meta($page_data->ID, 'vice-chairman1_name', true);?></li>
+				<li class="post-author"><?=get_post_meta($page_data->ID, 'vice-chairman2_title', true);?></li>
+				<li class="phone_number"><?=get_post_meta($page_data->ID, 'vice-chairman3_number', true);?></li>
+				<li class="email_address"><?=get_post_meta($page_data->ID, 'vice-chairman4_email', true);?></li>
+				<li class="work">
+					<address><?=get_post_meta($page_data->ID, 'vice-chairman5_workplace', true);?><br/>
+					<?=get_post_meta($page_data->ID, 'vice-chairman6_address', true);?></address>
+				</li>
+			
+<!--
 				<li class="name">Greg Moore</li>
 				<li class="post-author">Security Director</li>
 				<li class="phone_number">407-363-3555</li>
@@ -130,6 +157,7 @@ array(1) {
 					<address>Mall of Millenia<br />
 					Orlando, Fl. 32819</address>
 				</li>
+-->
 			</ul>
 		
 			<ul>
