@@ -13,24 +13,6 @@
 	
 	<body <?php body_class(); ?>>
 	
-		
-		
-		<!--
-<header>
-		
-			<div id="branding">
-			<div id="site-title"><?php if ( is_singular() ) {} else {echo '<h1>';} ?><a href="<?php echo home_url() ?>/" title="<?php bloginfo( 'name' ) ?>" rel="home"><?php bloginfo( 'name' ) ?></a><?php if ( is_singular() ) {} else {echo '</h1>';} ?></div>
-			
-				<p id="site-description"><?php bloginfo( 'description' ) ?></p>
-				
-			</div>
-			
-			<nav>
-
-				<?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
-			</nav>
-		</header>
--->
 	<div id="container">
 		
 		<section id="main">

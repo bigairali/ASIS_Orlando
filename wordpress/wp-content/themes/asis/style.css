@@ -135,6 +135,10 @@ table {
 
 /* Global Styles ============================================================================ */
 
+html {
+	margin: 0;
+}
+
 body {
 	padding-bottom: 60px;
 	background: url("images/pinstriped_suit.png");
