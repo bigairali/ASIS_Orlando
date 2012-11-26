@@ -1,7 +1,4 @@
-
-
 <?php get_header(); ?>		<!-- Get the header of the page and insert it here -->
-<!-- <?php the_post(); ?> -->		<!-- Get the POST's data to use for the page -->
 
 <img src="/asis_images/main_photo.jpg" width="960" height="300" alt="Picture of Lake Eola that represents Orlando" />
 			
@@ -18,10 +15,11 @@
 	?>
 	
 	<h2>ASIS Orlando Chapter</h2>
+	
+	<!-- Places the CONTENT of the homepage here -->
 	<?php echo apply_filters('the_content', $page_data->post_content); ?>
 	
 	<h3><span class="title-section">Coverage of ASIS News</span></h3>
-	
 	
 	<?php 
 	
@@ -38,32 +36,33 @@
 
 <!--	=== This is an example of what is in the $POSTS_ARRAY variable. ===
 
-array(1) { 
-	[0]=> object(stdClass)#250 (24) { 
-		["ID"]=> int(35) 
-		["post_author"]=> string(1) "1" 
-		["post_date"]=> string(19) "2012-11-25 23:52:15" 
-		["post_date_gmt"]=> string(19) "2012-11-25 23:52:15" 
-		["post_content"]=> string(348) "ASIS Orlando Chapter Board presented Orange County Sheriff Jerry Demings with the prestigious Matthew Simone Award. The Public, Private Partnership Award was announced at the 58th Annual ASIS International Convention held in Philadelphia, Penn. this past September. The award recognizes the partnership between law enforcement and private security." 
-		["post_title"]=> string(47) "ASIS Orlando Presented the Matthew Simone Award" 
-		["post_excerpt"]=> string(0) "" 
-		["post_status"]=> string(7) "publish" 
-		["comment_status"]=> string(4) "open" 
-		["ping_status"]=> string(4) "open" 
-		["post_password"]=> string(0) "" 
-		["post_name"]=> string(47) "asis-orlando-presented-the-matthew-simone-award" 
-		["to_ping"]=> string(0) "" 
-		["pinged"]=> string(0) "" 
-		["post_modified"]=> string(19) "2012-11-25 23:52:15" 
-		["post_modified_gmt"]=> string(19) "2012-11-25 23:52:15" 
-		["post_content_filtered"]=> string(0) "" 
-		["post_parent"]=> int(0) 
-		["guid"]=> string(32) "http://127.0.0.1/wordpress/?p=35" 
-		["menu_order"]=> int(0) 
-		["post_type"]=> string(4) "post" 
-		["post_mime_type"]=> string(0) "" 
-		["comment_count"]=> string(1) "0" 
-		["filter"]=> string(3) "raw" 
+array { 
+	[0] { 
+		["ID"]						=> 35 
+		["post_author"]				=> "1" 
+		["post_date"]				=> "2012-11-25 23:52:15" 
+		["post_date_gmt"]			=> "2012-11-25 23:52:15" 
+		["post_content"]			=> "
+										ASIS Orlando Chapter Board presented Orange County Sheriff Jerry Demings with the prestigious Matthew Simone Award. The Public, Private Partnership Award was announced at the 58th Annual ASIS International Convention held in Philadelphia, Penn. this past September. The award recognizes the partnership between law enforcement and private security." 
+		["post_title"]				=> "ASIS Orlando Presented the Matthew Simone Award" 
+		["post_excerpt"]			=> "" 
+		["post_status"]				=> "publish" 
+		["comment_status"]			=> "open" 
+		["ping_status"]				=> "open" 
+		["post_password"]			=> "" 
+		["post_name"]				=> "asis-orlando-presented-the-matthew-simone-award" 
+		["to_ping"]					=> "" 
+		["pinged"]					=> "" 
+		["post_modified"]			=> "2012-11-25 23:52:15" 
+		["post_modified_gmt"]		=> "2012-11-25 23:52:15" 
+		["post_content_filtered"]	=> "" 
+		["post_parent"]				=> 0 
+		["guid"]					=> "http://127.0.0.1/wordpress/?p=35" 
+		["menu_order"]				=> 0 
+		["post_type"]				=> "post" 
+		["post_mime_type"]			=> "" 
+		["comment_count"]			=> "0" 
+		["filter"]					=> "raw" 
 	} 
 }				
 -->
@@ -138,46 +137,53 @@ array(1) {
 			</ul>
 		
 			<ul>
-				<li class="position">Vice Chairman</li>
-				<li class="name"><?=get_post_meta($page_data->ID, 'vice-chairman1_name', true);?></li>
-				<li class="post-author"><?=get_post_meta($page_data->ID, 'vice-chairman2_title', true);?></li>
-				<li class="phone_number"><?=get_post_meta($page_data->ID, 'vice-chairman3_number', true);?></li>
-				<li class="email_address"><?=get_post_meta($page_data->ID, 'vice-chairman4_email', true);?></li>
-				<li class="work">
-					<address><?=get_post_meta($page_data->ID, 'vice-chairman5_workplace', true);?><br/>
-					<?=get_post_meta($page_data->ID, 'vice-chairman6_address', true);?></address>
-				</li>
+				<?php 
+					$vice_chairman_id = 101;							/* Vice Chairman page ID */
+					$vice_chairman_data = get_page($vice_chairman_id);	/* Vice Chairman page data */
+				?>
 			
-<!--
-				<li class="name">Greg Moore</li>
-				<li class="post-author">Security Director</li>
-				<li class="phone_number">407-363-3555</li>
-				<li class="email_address">gmoore@mallatmillenia.com</li>
+				<li class="position">Vice Chairman</li>
+				<li class="name"><?=get_post_meta($vice_chairman_data->ID, 'full_name', true);?></li>
+				<li class="post-author"><?=get_post_meta($vice_chairman_data->ID, 'title', true);?></li>
+				<li class="phone_number"><?=get_post_meta($vice_chairman_data->ID, 'phone', true);?></li>
+				<li class="email_address"><?=get_post_meta($vice_chairman_data->ID, 'email', true);?></li>
 				<li class="work">
-					<address>Mall of Millenia<br />
-					Orlando, Fl. 32819</address>
+					<address><?=get_post_meta($vice_chairman_data->ID, 'workplace', true);?><br/>
+					<?=get_post_meta($vice_chairman_data->ID, 'address', true);?></address>
 				</li>
--->
 			</ul>
 		
 			<ul>
+				<?php 
+					$secretary_id = 107;							/* Vice Chairman page ID */
+					$secretary_data = get_page($secretary_id);	/* Vice Chairman page data */
+				?>
+			
 				<li class="position">Secretary</li>
-				<li class="name">Jon Vereen</li>
-				<li class="post-author">Security Professional</li>
-				<li class="phone_number">407-251-6076</li>
-				<li class="email_address">digilent1@bellsouth.net</li>
+				<li class="name"><?=get_post_meta($secretary_data->ID, 'full_name', true);?></li>
+				<li class="post-author"><?=get_post_meta($secretary_data->ID, 'title', true);?></li>
+				<li class="phone_number"><?=get_post_meta($secretary_data->ID, 'phone', true);?></li>
+				<li class="email_address"><?=get_post_meta($secretary_data->ID, 'email', true);?></li>
+				<li class="work">
+					<address><?=get_post_meta($secretary_data->ID, 'workplace', true);?><br/>
+					<?=get_post_meta($secretary_data->ID, 'address', true);?></address>
+				</li>
 			</ul>
 		
 			<ul>
+				<?php 
+					$treasurer_id = 117;							/* Vice Chairman page ID */
+					$treasurer_data = get_page($treasurer_id);	/* Vice Chairman page data */
+				?>
+			
 				<li class="position">Treasurer</li>
-				<li class="name">Matthew Brett</li>
-				<li class="post-author">Security Manager</li>
-				<li class="phone_number">407-351-0144</li>
-				<li class="email_address">doug.sarubbi@ocfl.net</li>
+				<li class="name"><?=get_post_meta($treasurer_data->ID, 'full_name', true);?></li>
+				<li class="post-author"><?=get_post_meta($treasurer_data->ID, 'title', true);?></li>
+				<li class="phone_number"><?=get_post_meta($treasurer_data->ID, 'phone', true);?></li>
+				<li class="email_address"><?=get_post_meta($treasurer_data->ID, 'email', true);?></li>
 				<li class="work">
-					<address>Securitas Security Services USA<br />
-					7680 Universal Blvd. Suite 230<br />
-					Orlando, Fl. 32821</address>
+					<address><?=get_post_meta($treasurer_data->ID, 'workplace', true);?><br/>
+					<?=get_post_meta($treasurer_data->ID, 'address', true);?></address>
 				</li>
 			</ul>
 		</div><!-- end of directors_container -->
@@ -187,21 +193,5 @@ array(1) {
 	
 </section><!-- /main -->
 
-
-
-<!-- <?php get_sidebar(); ?> -->
+<!-- Gets the footer piece and places it at the bottom of the page -->
 <?php get_footer(); ?>
-
-
-<!--
-<?php get_header(); ?>
-<div id="content">
-<?php get_template_part( 'nav', 'above' ); ?>
-<?php while ( have_posts() ) : the_post() ?>
-<?php get_template_part( 'entry' ); ?>
-<?php comments_template(); ?>
-<?php endwhile; ?>
-<?php get_template_part( 'nav', 'below' ); ?>
-</div>
-<?php get_footer(); ?>
--->

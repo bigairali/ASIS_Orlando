@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.5.9)
 # Database: wordpress_asis
-# Generation Time: 2012-11-26 08:51:45 +0000
+# Generation Time: 2012-11-26 09:31:55 +0000
 # ************************************************************
 
 
@@ -335,7 +335,7 @@ VALUES
 	(16,15,'_edit_last','1'),
 	(17,15,'_edit_lock','1353887876:1'),
 	(18,17,'_edit_last','1'),
-	(19,17,'_edit_lock','1353919888:1'),
+	(19,17,'_edit_lock','1353919946:1'),
 	(29,20,'_menu_item_type','post_type'),
 	(30,20,'_menu_item_menu_item_parent','0'),
 	(31,20,'_menu_item_object_id','15'),
@@ -390,13 +390,36 @@ VALUES
 	(94,59,'_edit_last','1'),
 	(95,59,'_edit_lock','1353896903:1'),
 	(105,83,'_edit_last','1'),
-	(106,83,'_edit_lock','1353918792:1'),
+	(106,83,'_edit_lock','1353919958:1'),
 	(109,83,'full_name','Doug Sarubbi'),
 	(110,83,'title','Deputy Sergeant'),
 	(111,83,'address','6825 Westwood Blvd.\r\nOrlando, Fl. 32821'),
 	(112,83,'workplace','Orange County Sheriff\'s'),
 	(113,83,'email','doug.sarubbi@ocfl.net'),
-	(114,83,'phone','407-351-9368');
+	(114,83,'phone','407-351-9368'),
+	(115,101,'_edit_last','1'),
+	(116,101,'_edit_lock','1353920390:1'),
+	(117,101,'address','Orlando, Fl. 32819'),
+	(118,101,'full_name','Greg Moore'),
+	(119,101,'title','Security Director'),
+	(120,101,'phone','407-363-3555'),
+	(121,101,'workplace','Mall of Millenia'),
+	(122,107,'_edit_last','1'),
+	(123,107,'_edit_lock','1353920839:1'),
+	(124,107,'full_name','Jon Vereen'),
+	(125,107,'email','digilent1@bellsouth.net'),
+	(126,107,'phone','407-251-6076'),
+	(127,107,'title','Security Professional'),
+	(128,107,'workplace',''),
+	(129,107,'address',''),
+	(130,117,'_edit_last','1'),
+	(131,117,'_edit_lock','1353922291:1'),
+	(132,117,'full_name','Matthew Brett'),
+	(133,117,'title','Security Manager'),
+	(134,117,'phone','407-351-0144'),
+	(135,117,'email','matthew.brett@securitasinc.com'),
+	(136,117,'workplace','Securitas Security Services USA'),
+	(137,117,'address','7680 Universal Blvd. Suite 230\r\nOrlando, Fl. 32821');
 
 /*!40000 ALTER TABLE `wp_postmeta` ENABLE KEYS */;
 UNLOCK TABLES;
@@ -540,7 +563,30 @@ VALUES
 	(97,1,'2012-11-26 08:25:45','2012-11-26 08:25:45','Come and join our community of security and law enforcement professionals. You will get the benefit of networking with other security and law professionals and receive the latest intel effecting our industries. You\'ll have the change to learn from leading professionals at our monthly meetings. Becoming a member allows you to get involved with ASIS International and working with people in your community.','Homepage','','inherit','open','open','','17-revision-42','','','2012-11-26 08:25:45','2012-11-26 08:25:45','',17,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=97',0,'revision','',0),
 	(98,1,'2012-11-26 08:33:56','2012-11-26 08:33:56','','Chairman','','inherit','open','open','','83-revision-6','','','2012-11-26 08:33:56','2012-11-26 08:33:56','',83,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=98',0,'revision','',0),
 	(99,1,'2012-11-26 08:34:42','2012-11-26 08:34:42','','Chairman','','inherit','open','open','','83-revision-7','','','2012-11-26 08:34:42','2012-11-26 08:34:42','',83,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=99',0,'revision','',0),
-	(100,1,'2012-11-26 08:34:14','2012-11-26 08:34:14','Come and join our community of security and law enforcement professionals. You will get the benefit of networking with other security and law professionals and receive the latest intel effecting our industries. You\'ll have the change to learn from leading professionals at our monthly meetings. Becoming a member allows you to get involved with ASIS International and working with people in your community.','Homepage','','inherit','open','open','','17-revision-43','','','2012-11-26 08:34:14','2012-11-26 08:34:14','',17,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=100',0,'revision','',0);
+	(100,1,'2012-11-26 08:34:14','2012-11-26 08:34:14','Come and join our community of security and law enforcement professionals. You will get the benefit of networking with other security and law professionals and receive the latest intel effecting our industries. You\'ll have the change to learn from leading professionals at our monthly meetings. Becoming a member allows you to get involved with ASIS International and working with people in your community.','Homepage','','inherit','open','open','','17-revision-43','','','2012-11-26 08:34:14','2012-11-26 08:34:14','',17,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=100',0,'revision','',0),
+	(101,1,'2012-11-26 08:54:55','2012-11-26 08:54:55','','Vice Chairman','','publish','open','open','','vice-chairman','','','2012-11-26 08:56:27','2012-11-26 08:56:27','',17,'http://127.0.0.1/ASIS_Orlando/wordpress/?page_id=101',0,'page','',0),
+	(102,1,'2012-11-26 08:54:39','2012-11-26 08:54:39','','Vice Chairman','','inherit','open','open','','101-revision','','','2012-11-26 08:54:39','2012-11-26 08:54:39','',101,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=102',0,'revision','',0),
+	(103,1,'2012-11-26 08:54:55','2012-11-26 08:54:55','','Vice Chairman','','inherit','open','open','','101-revision-2','','','2012-11-26 08:54:55','2012-11-26 08:54:55','',101,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=103',0,'revision','',0),
+	(104,1,'2012-11-26 08:55:30','2012-11-26 08:55:30','','Vice Chairman','','inherit','open','open','','101-revision-3','','','2012-11-26 08:55:30','2012-11-26 08:55:30','',101,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=104',0,'revision','',0),
+	(105,1,'2012-11-26 08:55:47','2012-11-26 08:55:47','','Vice Chairman','','inherit','open','open','','101-revision-4','','','2012-11-26 08:55:47','2012-11-26 08:55:47','',101,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=105',0,'revision','',0),
+	(106,1,'2012-11-26 08:56:08','2012-11-26 08:56:08','','Vice Chairman','','inherit','open','open','','101-revision-5','','','2012-11-26 08:56:08','2012-11-26 08:56:08','',101,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=106',0,'revision','',0),
+	(107,1,'2012-11-26 09:03:45','2012-11-26 09:03:45','','Secretary','','publish','open','open','','secretary','','','2012-11-26 09:09:06','2012-11-26 09:09:06','',17,'http://127.0.0.1/ASIS_Orlando/wordpress/?page_id=107',0,'page','',0),
+	(108,1,'2012-11-26 09:01:56','2012-11-26 09:01:56','','Secretary','','inherit','open','open','','107-revision','','','2012-11-26 09:01:56','2012-11-26 09:01:56','',107,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=108',0,'revision','',0),
+	(109,1,'2012-11-26 09:03:45','2012-11-26 09:03:45','','Secretary','','inherit','open','open','','107-revision-2','','','2012-11-26 09:03:45','2012-11-26 09:03:45','',107,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=109',0,'revision','',0),
+	(110,1,'2012-11-26 09:06:36','2012-11-26 09:06:36','','Secretary','','inherit','open','open','','107-revision-3','','','2012-11-26 09:06:36','2012-11-26 09:06:36','',107,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=110',0,'revision','',0),
+	(111,1,'2012-11-26 09:06:53','2012-11-26 09:06:53','','Secretary','','inherit','open','open','','107-revision-4','','','2012-11-26 09:06:53','2012-11-26 09:06:53','',107,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=111',0,'revision','',0),
+	(112,1,'2012-11-26 09:07:13','2012-11-26 09:07:13','','Secretary','','inherit','open','open','','107-revision-5','','','2012-11-26 09:07:13','2012-11-26 09:07:13','',107,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=112',0,'revision','',0),
+	(113,1,'2012-11-26 09:08:23','2012-11-26 09:08:23','','Secretary','','inherit','open','open','','107-revision-6','','','2012-11-26 09:08:23','2012-11-26 09:08:23','',107,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=113',0,'revision','',0),
+	(114,1,'2012-11-26 09:08:39','2012-11-26 09:08:39','','Secretary','','inherit','open','open','','107-revision-7','','','2012-11-26 09:08:39','2012-11-26 09:08:39','',107,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=114',0,'revision','',0),
+	(115,1,'2012-11-26 09:08:47','2012-11-26 09:08:47','','Secretary','','inherit','open','open','','107-revision-8','','','2012-11-26 09:08:47','2012-11-26 09:08:47','',107,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=115',0,'revision','',0),
+	(116,1,'2012-11-26 09:08:57','2012-11-26 09:08:57','','Secretary','','inherit','open','open','','107-revision-9','','','2012-11-26 09:08:57','2012-11-26 09:08:57','',107,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=116',0,'revision','',0),
+	(117,1,'2012-11-26 09:09:36','2012-11-26 09:09:36','','Treasurer','','publish','open','open','','treasurer','','','2012-11-26 09:11:30','2012-11-26 09:11:30','',17,'http://127.0.0.1/ASIS_Orlando/wordpress/?page_id=117',0,'page','',0),
+	(118,1,'2012-11-26 09:09:20','2012-11-26 09:09:20','','Treasurer','','inherit','open','open','','117-revision','','','2012-11-26 09:09:20','2012-11-26 09:09:20','',117,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=118',0,'revision','',0),
+	(119,1,'2012-11-26 09:09:36','2012-11-26 09:09:36','','Treasurer','','inherit','open','open','','117-revision-2','','','2012-11-26 09:09:36','2012-11-26 09:09:36','',117,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=119',0,'revision','',0),
+	(120,1,'2012-11-26 09:09:51','2012-11-26 09:09:51','','Treasurer','','inherit','open','open','','117-revision-3','','','2012-11-26 09:09:51','2012-11-26 09:09:51','',117,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=120',0,'revision','',0),
+	(121,1,'2012-11-26 09:10:08','2012-11-26 09:10:08','','Treasurer','','inherit','open','open','','117-revision-4','','','2012-11-26 09:10:08','2012-11-26 09:10:08','',117,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=121',0,'revision','',0),
+	(122,1,'2012-11-26 09:10:42','2012-11-26 09:10:42','','Treasurer','','inherit','open','open','','117-revision-5','','','2012-11-26 09:10:42','2012-11-26 09:10:42','',117,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=122',0,'revision','',0),
+	(123,1,'2012-11-26 09:10:57','2012-11-26 09:10:57','','Treasurer','','inherit','open','open','','117-revision-6','','','2012-11-26 09:10:57','2012-11-26 09:10:57','',117,'http://127.0.0.1/ASIS_Orlando/wordpress/?p=123',0,'revision','',0);
 
 /*!40000 ALTER TABLE `wp_posts` ENABLE KEYS */;
 UNLOCK TABLES;
