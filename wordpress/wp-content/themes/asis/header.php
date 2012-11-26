@@ -7,7 +7,7 @@
 	
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 
-		<?php wp_head(); ?>
+		<!-- <?php wp_head(); ?> -->
 	
 	</head>
 	
@@ -24,8 +24,6 @@
 					<?php wp_nav_menu(array( 'menu' => 'asis_menu'));?>
 				</nav><!-- /#nav  -->
 			</header><!-- /header -->
-<!-- 		<?php bloginfo('template_directory'); ?>/ -->
-			<!-- <img src="<?php bloginfo('template_directory'); ?>/images/main_photo.jpg" width="960" height="300" alt="Picture of Lake Eola" /> -->
 			
 			
 			
