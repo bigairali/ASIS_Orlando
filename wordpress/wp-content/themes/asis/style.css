@@ -287,7 +287,8 @@ h4 {
 
 /* Header Styles ============================================================================ */
 header {
-	overflow: hidden;
+	overflow: visible;
+	width: 100%;
 }
 
 h1 {
@@ -306,39 +307,102 @@ h1 a {
 
 nav {
 	float: right;
-	overflow: hidden;
+	overflow: visible;
 }
 
-nav ul li {
-	float: left;
+nav a{
+	text-decoration: none;
 }
 
-nav ul li a {
-	margin: 0 15px 30px;
-	padding-top: 35px;
+nav a:hover{
+	text-decoration: none;
+}
+
+
+#menu-asis_menu > li {
+	margin: 0 15px;
 	font-size: 2em;
 	font-family: 'droid_sansbold';
+	float: left;
+	position: relative;
+}
+
+#menu-asis_menu > li > a {
+	padding: 30px 0 10px;
 	border-top: 8px solid #f7f7f7;
 	display: block;
-	text-decoration: none;
 	
 	/* transitions */
-	transition: border-top 0.5s;
-	-moz-transition: border-top 0.5s; /* Firefox 4 */
-	-webkit-transition: border-top 0.5s; /* Safari and Chrome */
-	-o-transition: border-top 0.5s; /* Opera */
-	transition: border-top 0.5s;
-	-moz-transition: border-top 0.5s; /* Firefox 4 */
-	-webkit-transition: border-top 0.5s; /* Safari and Chrome */
-	-o-transition: border-top 0.5s; /* Opera */
+	transition: border-top 0.2s;
+	-moz-transition: border-top 0.2s; /* Firefox 4 */
+	-webkit-transition: border-top 0.2s; /* Safari and Chrome */
+	-o-transition: border-top 0.2s; /* Opera */
 }
 
-nav a:hover {
+nav #menu-asis_menu > li:hover > a {
 	border-top: 8px solid #003366;
 }
 
-.active {
+
+/* Active State */
+#menu-asis_menu > .current_page_item > a,
+#menu-asis_menu > .current-page-ancestor > a {
 	border-top: 8px solid #003366;
+}
+
+.sub-menu .current_page_item a {
+	background-color: #333;
+}
+
+nav ul li:hover .sub-menu {
+	height: 100%;
+	opacity: 1;
+	overflow: visible;
+}
+
+
+/* The Sub Navigation Styling */
+
+nav ul li .sub-menu {
+	height: 0;
+	padding-top: 5px;
+	text-align: right;
+	opacity: 0;
+	position: absolute;
+	top: 100%;
+	right: 0;
+	overflow: hidden;
+	font-weight: bold; 
+	
+	/* transitions */
+	transition: all 0.2s;
+	-moz-transition: all 0.2s; /* Firefox 4 */
+	-webkit-transition: all 0.2s; /* Safari and Chrome */
+	-o-transition: all 0.2s; /* Opera */
+}
+
+.sub-menu > li {
+	border-top: 1px solid #f2f2f2;
+	white-space: nowrap;
+}
+
+.sub-menu li a {
+	padding: 5px 10px;
+	background: #336699;
+	color: #f2f2f2;
+	font-size: 0.8em;
+	display: block;
+}
+
+.sub-menu li a:hover {
+	background: #333;
+}
+
+/* .menu-item-22 is Wordpress's class for ABOUT */
+/* .menu-item-21 is Wordpress's class for MEMBERSHIP */
+.menu-item-22,
+.menu-item-21 {
+	background: url(images/down_arrow.png) no-repeat center bottom;
 }
 
 
@@ -604,4 +668,30 @@ footer p:first-child {
 
 
 
+ 
 
+/* Clearfix */
+.clearfix:after,
+#menu-asis_menu:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix,
+#menu-asis_menu {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix,
+html[xmlns] #menu-asis_menu {
+	display: block;
+}
+ 
+* html .clearfix,
+* html #menu-asis_menu {
+	height: 1%;
+}

@@ -17,7 +17,7 @@
 		
 		<section id="main">
 			
-			<header>
+			<header class="clearfix">
 				<h1><a href="<?php echo home_url() ?>/" title="<?php bloginfo( 'name' ) ?>" rel="home"><?php bloginfo( 'name' ) ?></a></h1>
 			
 				<nav>
@@ -25,7 +25,7 @@
 				</nav><!-- /#nav  -->
 			</header><!-- /header -->
 			
-			
+
 			
 			
 			
