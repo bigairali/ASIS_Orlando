@@ -22,19 +22,17 @@
 	<h3><span class="title-section">Coverage of ASIS News</span></h3>
 	
 	<?php 
-	
 	/* These are the ARGUMENTS for the get_posts PARAM */
-		$posts_args = array(
+		$coverage_args = array(
 						'numberposts' => 5,		/* How many posts to pull */
 						'category' => 5			/* ID of Category */
 						);
 		
-	/* Get an array of posts that match my arguments and put them in my $POSTS_ARRAY variable */
-		$posts_array = get_posts( $posts_args ); 
-	
+	/* Get an array of posts that match my arguments and put them in my $COVERAGE_ARRAY variable */
+		$coverage_array = get_posts( $coverage_args ); 
 	?>
 
-<!--	=== This is an example of what is in the $POSTS_ARRAY variable. ===
+<!--	=== This is an example of what is in the $COVERAGE_ARRAY variable. ===
 
 array { 
 	[0] { 
@@ -67,26 +65,29 @@ array {
 }				
 -->
 
-	<?php 
 
-/* For each post in the Coverage of ASIS News category, make a post up to a cap of 5 */
-	foreach($posts_array as $post_value){
+
+<!-- FOREACH post in the Coverage of ASIS News category, make a post of the most recent posts up to a cap of 5 -->
+	<?php 
+	foreach($coverage_array as $coverage_value){
 	
 	/* Get the data for the user that posted this message */
-		$all_meta_for_user = get_user_meta( $post_value->post_author );
+		$all_meta_for_user = get_user_meta( $coverage_value->post_author );
 		
-		$originalDate = $post_value->post_date;
-		$newDate = date("F j, Y", strtotime($originalDate));
+		$originalDate_coverage = $coverage_value->post_date;
+		$newDate_coverage = date("F j, Y", strtotime($originalDate_coverage));
 		
 	/* This is the HTML template styled for the use of posts */
-		$post_template = '<div>
-		<h4><a href="'.$post_value->guid.'">'.$post_value->post_title.'</a><span class="post-author">Posted on '.$newDate.' by '.$all_meta_for_user['nickname'][0].'</span></h4>
-		<p>'.$post_value->post_content.'</p>
+		$coverage_template = '<div>
+		<h4><a href="'.$coverage_value->guid.'">'.$coverage_value->post_title.'</a><span class="post-author">Posted on '.$newDate_coverage.' by '.$all_meta_for_user['nickname'][0].'</span></h4>
+		<p>'.apply_filters('the_content', $coverage_value->post_content).'</p>
 		</div>';
 		
-	/* Places the $POST_TEMPLATE onto the page for each POST_VALUE in POST_ARRAY // Max of 5 */
-		echo $post_template;					
+	/* Places the $coverage_TEMPLATE onto the page for each coverage_VALUE in coverage_ARRAY // Max of 5 */
+		echo $coverage_template;					
 	} ?>
+<!-- end of FOREACH -->	
+	
 
 </div>
 			
@@ -97,11 +98,53 @@ array {
 		<p><a class="member" href="#">Become a Member</a></p>
 		
 		<h3><span class="title-section">Upcoming Events</span></h3>
-		<img class="upcoming_thumb" src="images/getting_award.jpg" alt="Aliquote" width="292" height="141">
+
+	<?php 
+	/* These are the ARGUMENTS for the get_posts PARAMETER */
+		$upcoming_args = array(
+						'numberposts' => 5,		/* How many posts to pull */
+						'category' => 7			/* ID of Category */
+						);
+		
+	/* Get an array of posts that match my arguments and put them in my $UPCOMING_ARRAY variable */
+		$upcoming_array = get_posts( $upcoming_args );
+	?>
+
+		
+<!-- FOREACH post in the Upcoming Events, make a post of the most recent posts up to a cap of 5 -->
+	<?php 
+	foreach($upcoming_array as $upcoming_value){
+	
+		$upcoming_post_id = $upcoming_value->ID;
+		$upcoming_date = get_post_meta($upcoming_post_id, 'event_date', true);
+		
+	/* Get the data for the user that posted this message */
+		$upcoming_user = get_user_meta( $upcoming_value->post_author );
+		
+		$originalDate_upcoming = $upcoming_value->post_date;
+		$newDate_upcoming = date("d M", strtotime($originalDate_upcoming));
+		
+	/* This is the HTML template styled for the use of posts */
+		$upcoming_template = 	'<div class="upcoming_post"><h4><span class="upcoming-date">'.$upcoming_date.'</span><a href="'.$upcoming_value->guid.'">'.$upcoming_value->post_title.
+								'</a><span class="post-author">Posted on '.$newDate_upcoming.' by '.$upcoming_user['nickname'][0].'</span></h4>'
+								.apply_filters('the_content', $upcoming_value->post_content).'</div>';
+		
+	/* Places the $coverage_TEMPLATE onto the page for each coverage_VALUE in coverage_ARRAY // Max of 5 */
+		echo $upcoming_template;					
+	} ?>
+<!-- end of FOREACH -->	
+		
+		
+		
+		
+		
+		
+<!--
 		<h4><span class="upcoming-date">20 Sept</span>Outing - Tickets are free to members of ASIS</h4>
 		<p>Ten seats are available and transportation has been arranged through Greg Moore. At 6:00PM, van pickup at the Mall of Millenia. Game starts at 7:00pm and group will be taken back to their vehicles at the end of the game.</p>
 		<p>Tickets are free for members.</p>
 		<p>If you wish to attend email: doug.sarubbi@ocfl.net</p>
+-->
 		
 		<h3><span class="title-section">Awards</span></h3>
 		<ul class="awards">
