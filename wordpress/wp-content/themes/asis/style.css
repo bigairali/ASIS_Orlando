@@ -152,16 +152,6 @@ p {
 	overflow: hidden;
 }
 
-/*
-p > a > img{
-	margin-right: 1.2em; 
-	display: inline-block;
-	float: left;
-	position: relative;
-	top: 0;
-	left: 0;
-}
-*/
 
 /* div clear */
 .clear {
@@ -453,7 +443,6 @@ nav ul li .sub-menu {
 }
 
 h4 {
-	letter-spacing: 0;
 	line-height: 1.2em;	
 }
 
@@ -483,31 +472,30 @@ h4 {
 	text-decoration: none;
 }
 
-
-aside ul li {
-	margin-bottom: 5px;
-}
-
 aside ul {
 	margin-bottom: 40px;
 }
 
+
 /* Awards styling */
-aside ul li > p {
-	font-size: 1.1em;
-	line-height: 1.4em;
+.awards {
+	font-family: 'droid_sansregular';
+	font-size: 1.4em;
+	line-height: 1.2em;
 }
 
-aside ul li > span {
-	width: 40px;
+strong {
 	font-family: 'droid_sansbold';
-	font-size: 1.3em;
-	display: block;
-	float: left;
+	font-weight: bold;
 }
 
+.awards li {
+	margin-bottom: 10px;
+}
+
+/* Upcoming Events styling */
 .upcoming_post > h4 {
-	font-size: 1.6em;
+	font-size: 1.7em;
 }
 
 .upcoming_post p {
@@ -534,9 +522,8 @@ img + h4 {
 }
 
 .links_logo {
-	width: 224px;
-	height: 142px;
 	margin: 0 auto;
+	margin-top: 20px;
 	display: block;
 }
 
@@ -566,30 +553,7 @@ cite {
 
 
 /* Links Page Styles ============================================================================ */
-.security_links {
-	overflow: hidden;
-}
 
-.security_links ul {
-	padding-left: 10px;
-	list-style-image: url('images/right_arrow.png');
-}
-
-.security_links ul li {
-	overflow: visible;
-}
-
-.left, .right {
-	width: 45%;
-}
-
-.left {
-	float: left;
-}
-
-.right {
-	float: right;
-}
 
 aside .security_links a {
 	font-size: 1.6em;
@@ -601,11 +565,14 @@ aside .security_links a {
 	line-height: 2em;
 }
 
+.security_links li {
+	padding-left: 10px;
+	background: url(images/right_arrow.png) no-repeat left 9px;
+}
+
 .security_links a:hover {
 	color: #B55600;
 }
-
-
 
 
 /* Footer Styles ============================================================================ */

@@ -65,8 +65,6 @@ array {
 }				
 -->
 
-
-
 <!-- FOREACH post in the Coverage of ASIS News category, make a post of the most recent posts up to a cap of 5 -->
 	<?php 
 	foreach($coverage_array as $coverage_value){
@@ -134,11 +132,6 @@ array {
 	} ?>
 <!-- end of FOREACH -->	
 		
-		
-		
-		
-		
-		
 <!--
 		<h4><span class="upcoming-date">20 Sept</span>Outing - Tickets are free to members of ASIS</h4>
 		<p>Ten seats are available and transportation has been arranged through Greg Moore. At 6:00PM, van pickup at the Mall of Millenia. Game starts at 7:00pm and group will be taken back to their vehicles at the end of the game.</p>
@@ -147,13 +140,20 @@ array {
 -->
 		
 		<h3><span class="title-section">Awards</span></h3>
-		<ul class="awards">
-			<li><span>2012 -</span><p>Matthew Simeone Award for Public, Private Partnership</p></li>
-			<li><span>2009 -</span><p>I.B. Hale "Chapter of the Year Award"</p></li>
-			<li><span>2009 -</span><p>Honorable Mention "Website Award"</p></li>
-			<li><span>2008 -</span><p>Community Service Award</p></li>
-			<li><span>2008 -</span><p>Website of the Year Award</p></li>
-		</ul>
+		
+		<?php 
+		
+		/* HOMEPAGE/AWARDS page ID number */
+			$awards_id = 176; 
+			
+		/* Get the HOMEPAGE/AWARDS data for use */
+			$awards_data = get_page( $awards_id ); 
+			
+		?>
+
+		<div class="awards">
+			<?php echo apply_filters('the_content', $awards_data->post_content); ?>
+		</div>
 	</aside>
 	
 	<div class="clear"></div>

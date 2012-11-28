@@ -7,7 +7,7 @@
 	
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 
-		<!-- <?php wp_head(); ?> -->
+<!-- 		<?php wp_head(); ?> -->
 	
 	</head>
 	
