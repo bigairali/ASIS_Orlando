@@ -300,6 +300,9 @@ h1 a {
 nav {
 	float: right;
 	overflow: visible;
+	
+	/* Current bug fix for aliasing fonts */
+	-webkit-transform-style: preserve-3d;
 }
 
 nav a{
@@ -364,7 +367,6 @@ nav ul li .sub-menu {
 	top: 100%;
 	right: 0;
 	overflow: hidden;
-	font-weight: bold; 
 	
 	/* transitions */
 	transition: all 0.2s;

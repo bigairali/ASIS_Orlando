@@ -13,27 +13,81 @@
 	font-size: 1.6em;
 }
 
-.clearfix:after,
-.navigation:after {
-	content: ".";
+/* The entire list of comments */
+#comments-list li {
+	margin: 40px 0;
+}
+	/* end */
+
+.comment {
+	padding-bottom: 40px;
+	border-bottom: 1px dashed #333333;
+}
+
+
+/* User's icon and name */
+.vcard {
+	margin-bottom: 5px;
+}
+
+.vcard > img {
+	display: none;
+}
+
+.vcard > span {
+	font-size: 1.4em;
+	font-family: 'droid_sansbold';
 	display: block;
-	clear: both;
-	visibility: hidden;
-	line-height: 0;
-	height: 0;
 }
- 
-.clearfix,
-.navigation {
-	display: inline-block;
+	/* end */
+
+
+/* Meta data of the comment */
+.comment-meta {
+	margin-bottom: 20px;
 }
- 
-html[xmlns] .clearfix,
-html[xmlns] .navigation {
+	/* end */
+
+
+/* User's comment */
+.comment-content {
+	font-size: 1.6em;
+}
+
+.comment-reply-link {
+	margin-top: 20px;
+/* 	text-align: right; */
+}
+
+
+/* Post a comment */
+#reply-title {
+	margin-bottom: 0px;
+	border: 0;
+	font-size: 2.0em;
+	font-family: 'droid_sansbold';	
+}
+
+.logged-in-as {
+	margin-bottom: 20px;
+}
+
+label {
+	font-size: 1.6em;
 	display: block;
 }
- 
-* html .clearfix,
-* html .navigation {
-	height: 1%;
+
+textarea {
+	width: 60%;
 }
+
+.form-allowed-tags {
+	width: 80%;
+	margin-bottom: 20px;
+}
+
+
+
+
+
+
