@@ -1,0 +1,39 @@
+/* This is the style for any POSTS that a person may click on */
+
+#content {
+	padding: 0 40px;
+}
+
+.entry-footer {
+	margin: 5px 0;
+}
+
+.entry-content {
+	margin: 40px 0;
+	font-size: 1.6em;
+}
+
+.clearfix:after,
+.navigation:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+.clearfix,
+.navigation {
+	display: inline-block;
+}
+ 
+html[xmlns] .clearfix,
+html[xmlns] .navigation {
+	display: block;
+}
+ 
+* html .clearfix,
+* html .navigation {
+	height: 1%;
+}

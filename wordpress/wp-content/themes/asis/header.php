@@ -6,17 +6,24 @@
 		<title><?php wp_title(' | ', true, 'right'); ?></title>
 	
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
-
+		
+		<?php if(is_single()){ ?>
+		
+		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/post.css" />
+		
+		<?php } ?>
+		
 <!-- 		<?php wp_head(); ?> -->
 	
 	</head>
 	
 	<body <?php body_class(); ?>>
 	
+	
+	
 	<div id="container">
 		
 		<section id="main">
-			
 			<header class="clearfix">
 				<h1><a href="<?php echo home_url() ?>/" title="<?php bloginfo( 'name' ) ?>" rel="home"><?php bloginfo( 'name' ) ?></a></h1>
 			
