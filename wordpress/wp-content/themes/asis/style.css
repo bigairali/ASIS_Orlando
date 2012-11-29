@@ -436,7 +436,7 @@ nav ul li .sub-menu {
 	font-family: 'droid_serifbold';
 }
 
-#directors .post-author, .email_address {
+.post-author, .email_address {
 	margin-bottom: 10px;
 }
 
@@ -640,8 +640,12 @@ footer p:first-child {
 }
 
 
-
-
+/* News Posts Styling */
+.alignleft {
+	margin-right: 10px;
+	display: inline-block;
+	float: left;	
+}
 
 
 

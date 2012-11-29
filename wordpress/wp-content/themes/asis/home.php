@@ -28,7 +28,7 @@
 						'category' => 5			/* ID of Category */
 						);
 		
-	/* Get an array of posts that match my arguments and put them in my $COVERAGE_ARRAY variable */
+	/* Get posts that match my arguments and put each post in my $COVERAGE_ARRAY variable */
 		$coverage_array = get_posts( $coverage_args ); 
 	?>
 
@@ -78,7 +78,7 @@ array {
 	/* This is the HTML template styled for the use of posts */
 		$coverage_template = '<div>
 		<h4><a href="'.$coverage_value->guid.'">'.$coverage_value->post_title.'</a><span class="post-author">Posted on '.$newDate_coverage.' by '.$all_meta_for_user['nickname'][0].'</span></h4>
-		<p>'.apply_filters('the_content', $coverage_value->post_content).'</p>
+		'.apply_filters('the_content', $coverage_value->post_content).'
 		</div>';
 		
 	/* Places the $coverage_TEMPLATE onto the page for each coverage_VALUE in coverage_ARRAY // Max of 5 */
@@ -104,7 +104,7 @@ array {
 						'category' => 7			/* ID of Category */
 						);
 		
-	/* Get an array of posts that match my arguments and put them in my $UPCOMING_ARRAY variable */
+	/* Get posts that match my arguments and put each post in my $UPCOMING_ARRAY variable */
 		$upcoming_array = get_posts( $upcoming_args );
 	?>
 
