@@ -87,6 +87,15 @@ textarea {
 }
 
 
+/* The REPLY */
+.children {
+	padding-left: 80px;
+	background: #f2f2f2;
+}
+
+.children li {
+	border: 0;
+}
 
 
 
