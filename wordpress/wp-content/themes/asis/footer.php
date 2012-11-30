@@ -9,7 +9,7 @@
 			</div>
 			
 			<div>
-				<h5>Member Services</h5>
+				<h6>Member Services</h6>
 				<ul class="services">
 					<li><a href="#">Pay Dues</a></li>
 					<li><a href="#">Attend a Meeting</a></li>

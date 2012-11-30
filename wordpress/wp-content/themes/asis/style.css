@@ -149,7 +149,7 @@ body {
 p {
 	letter-spacing: 0.1em;
 	line-height: 1.7em;
-	overflow: hidden;
+	overflow: auto;
 }
 
 
@@ -183,7 +183,7 @@ a:hover {
 /* White Background */
 #main {
 	background-color: #f7f7f7;
-	padding-bottom: 60px;
+	padding-bottom: 100px;
 }
 
 /* Content Columns */
@@ -211,9 +211,11 @@ aside p {
 }
 
 	/* Dividers that have content immediately after them */
+/*
 h3 + p, h3 + img, h3 + ul {
 	margin-top: 30px;
 }
+*/
 
 
 /* Divders for content on a page */
@@ -223,7 +225,6 @@ h2 {
 	margin: 60px 0 15px;
 	font-size: 2.9em;
 	font-family: 'droid_sansbold', sans-serif;
-	font-weight: bold;
 }
 
 	/* Page Dividers */
@@ -239,7 +240,6 @@ h4 {
 	margin: 40px 0 10px;
 	font-family: 'droid_serifbold', serif;
 	font-size: 2.3em;
-	font-weight: bold;
 }
 	
 	/* Posted by header */
@@ -261,7 +261,6 @@ h4 {
 	color: #f7f7f7;
 	font-family: 'droid_sansbold', sans-serif;
 	font-size: 14px;
-	font-weight: bold;
 	display: inline-block;
 }
 
@@ -321,7 +320,6 @@ nav a:hover{
 	margin: 0 15px;
 	font-size: 2em;
 	font-family: 'droid_sansbold', sans-serif;
-	font-weight: bold;
 	float: left;
 	position: relative;
 }
@@ -433,13 +431,11 @@ nav ul li .sub-menu {
 	color: #B55600;
 	font-family: 'droid_sansbold', sans-serif;
 	font-size: 1.6em;
-	font-weight: bold;
 }
 
 .name {
 	font-size: 1.8em;
 	font-family: 'droid_serifbold', sans-serif;
-	font-weight: bold;
 }
 
 .post-author, .email_address {
@@ -471,7 +467,6 @@ h4 {
 	color: #f7f7f7;
 	font-family: 'droid_sansbold', sans-serif;
 	font-size: 1.6em;
-	font-weight: bold;
 	letter-spacing: 0;
 	text-decoration: none;
 	display: inline-block;
@@ -495,7 +490,6 @@ aside ul {
 
 strong {
 	font-family: 'droid_sansbold';
-	font-weight: bold;
 }
 
 .awards li {
@@ -519,7 +513,6 @@ strong {
 	color: #f7f7f7;
 	font-family: 'droid_sansbold';
 	font-size: 0.8em;
-	font-weight: bold;
 	letter-spacing: 0.1em;
 	display: inline-block;
 	position: relative;
@@ -539,22 +532,33 @@ img + h4 {
 
 
 /* Blockquote Styles ============================================================================ */
-blockquote {
+.the_quote {
 	border-bottom: 1px solid #484141;
 	border-top: 1px solid #484141;	
 	margin-top: 40px;
 	padding: 40px 175px 30px;
 	background: #f0f0f0;
-	background-image: url('images/quote.png');
-	background-repeat: no-repeat;
-	background-position: 160px 30px;
+}
+
+blockquote {
+	margin: 0 auto;
 	font-family: 'droid_serifregular';
 	font-size: 2.2em;
 	text-align: center;
+	position: relative;
+}
+
+blockquote:before {
+	content: "\201C";
+	font-size: 1.8em;
+	position: absolute;
+	top: -10px;
+	left: -10px;
 }
 
 cite {
 	padding-top: 15px;
+	font-family: 'droid_serifitalic';
 	font-size: 0.7em;
 	text-align: right;
 	display: block;
@@ -593,7 +597,7 @@ footer {
 	overflow: hidden;
 }
 
-footer h5 {
+footer h6 {
 	margin-bottom: 5px;
 	padding-bottom: 2px;
 	color: #709FB3;
@@ -662,7 +666,8 @@ footer p:first-child {
 
 /* Clearfix */
 .clearfix:after,
-#menu-asis_menu:after {
+#menu-asis_menu:after,
+.entry-content:after {
 	content: ".";
 	display: block;
 	clear: both;
@@ -672,16 +677,19 @@ footer p:first-child {
 }
  
 .clearfix,
-#menu-asis_menu {
+#menu-asis_menu,
+.entry-content {
 	display: inline-block;
 }
  
 html[xmlns] .clearfix,
-html[xmlns] #menu-asis_menu {
+html[xmlns] #menu-asis_menu,
+html[xmlns] .entry-content {
 	display: block;
 }
  
 * html .clearfix,
-* html #menu-asis_menu {
+* html #menu-asis_menu,
+* html .entry-content {
 	height: 1%;
 }

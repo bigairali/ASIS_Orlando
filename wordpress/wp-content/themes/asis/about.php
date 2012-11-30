@@ -18,7 +18,9 @@
 
 	<img class="header_image" src="/asis_images/sub_lake_eola.jpg" alt="Different angle of Lake Eola" width="960" height="160" />
 
-	<blockquote><?php echo get_post_meta( $page_id, 'quote', true); ?><cite><?php echo get_post_meta( $page_id, 'cite', true); ?></cite></blockquote>
+	<div class="the_quote">
+		<blockquote><?php echo get_post_meta( $page_id, 'quote', true); ?><cite><?php echo get_post_meta( $page_id, 'cite', true); ?></cite></blockquote>
+	</div>
 			
 	<div class="main_column">
 		<?php echo apply_filters('the_content', $page_data->post_content); ?>

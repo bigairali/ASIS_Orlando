@@ -1,6 +1,32 @@
 /* This is the style for any POSTS that a person may click on */
+#main {
+	padding-bottom: 0;
+}
 
-#content {
+h5 {
+	padding-top: 10px;
+	padding-left: 40px;
+	font-size: 1.8em;
+}
+
+#comments-list > p {
+	padding-left: 40px;
+	padding-bottom: 8px;
+	border-bottom: 1px dashed black;
+}
+
+
+#comments {
+	padding-top: 40px;
+	padding-bottom: 100px;
+}
+
+.post {
+	padding: 0 40px;
+}
+
+#comments-list > ul, #respond {
+	width: 528px;
 	padding: 0 40px;
 }
 
@@ -13,14 +39,9 @@
 	font-size: 1.6em;
 }
 
-/* The entire list of comments */
-#comments-list li {
-	margin: 40px 0;
-}
-	/* end */
 
 .comment {
-	padding-bottom: 40px;
+	padding: 30px 0;
 	border-bottom: 1px dashed #333333;
 }
 
@@ -37,7 +58,6 @@
 .vcard > span {
 	font-size: 1.4em;
 	font-family: 'droid_sansbold', sans-serif;
-	font-weight: bold;
 	display: block;
 }
 	/* end */
@@ -45,7 +65,7 @@
 
 /* Meta data of the comment */
 .comment-meta {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 }
 	/* end */
 
@@ -67,7 +87,6 @@
 	border: 0;
 	font-family: 'droid_sansbold', sans-serif;
 	font-size: 2.0em;
-	font-weight: bold;
 }
 
 .logged-in-as {
@@ -80,7 +99,7 @@ label {
 }
 
 textarea {
-	width: 60%;
+	width: 99%;
 }
 
 .form-allowed-tags {
@@ -90,13 +109,29 @@ textarea {
 
 
 /* The REPLY */
-.children {
-	padding-left: 80px;
-	background: #f2f2f2;
+.depth-1 > ul {
+	padding-left: 40px;
+	margin-top: 30px;
+	background: #f0f0f0;
 }
 
 .children li {
 	border: 0;
+	background: ;
+}
+
+#reply-title {
+	position: relative;
+}
+
+#reply-title small {
+	font-size: 0.5em;
+	letter-spacing: 0.1em;
+	display: block;
+	position: absolute;
+	top: 9px;
+	right: 0;
+	
 }
 
 

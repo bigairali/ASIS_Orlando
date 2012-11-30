@@ -9,8 +9,8 @@ if ( post_password_required() ) :
 </div>
 
 <?php
-return;
-endif;
+	return;
+	endif;
 ?>
 
 <div id="comments">
@@ -26,7 +26,8 @@ endif;
 
 	<div id="comments-list" class="comments">
 
-		<h3><?php echo ($comment_count > 1 ? '<span class="title-section">'.$comment_count.' '. __('Comments', 'blankslate') : '<span class="title-section">'. __( 'One', 'blankslate' ) . __('Comment', 'blankslate').'</span>' ); ?></h3>
+		<h5><?php echo ($comment_count > 1 ? $comment_count.' '. __('Comments', 'blankslate') : __( 'One', 'blankslate' ) . __('Comment', 'blankslate') ); ?></h4>
+		<p>These are user comments and are not associated with ASIS International.</p>
 		
 		<?php $total_pages = get_comment_pages_count(); if ( $total_pages > 1 ) : ?>
 		
@@ -36,36 +37,37 @@ endif;
 		
 	<?php endif; ?>
 	
-	<ul>
-		<?php wp_list_comments('type=comment&callback=blankslate_custom_comments'); ?>
-	</ul>
+		<ul>
+			<?php wp_list_comments('type=comment&callback=blankslate_custom_comments'); ?>
+		</ul>
 	
 	<?php $total_pages = get_comment_pages_count(); if ( $total_pages > 1 ) : ?>
 	
-	<div id="comments-nav-below" class="comments-navigation">	
-		<div class="paginated-comments-links"><?php paginate_comments_links(); ?></div>
-	</div>
+		<div id="comments-nav-below" class="comments-navigation">	
+			<div class="paginated-comments-links"><?php paginate_comments_links(); ?></div>
+		</div>
 	
 	<?php endif; ?>
 	
-</div>
+	</div>
 
 <?php 
 	endif; 
 	global $comments_by_type;
 	$comments_by_type = &separate_comments( $comments );
-if ( ! empty($comments_by_type['pings']) ) : ?>
-<div id="trackbacks-list" class="comments">
-<h3><?php echo($ping_count > 1 ? '<span>'.$ping_count.'</span> '.__('Trackbacks', 'blankslate') : '<span>'. __('One', 'blankslate' ) .'</span> '. __('Trackback', 'blankslate') ); ?></h3>
-<ul>
-<?php wp_list_comments('type=pings&callback=blankslate_custom_pings'); ?>
-</ul>
-</div>
-<?php endif; ?>
-<?php endif; ?>
-<?php if ( comments_open() ) : ?>
-<div id="respond">
-<?php comment_form(); ?>
-</div>
-<?php endif; ?>
+	if ( ! empty($comments_by_type['pings']) ) : ?>
+	<div id="trackbacks-list" class="comments">
+		<h3><?php echo($ping_count > 1 ? '<span>'.$ping_count.'</span> '.__('Trackbacks', 'blankslate') : '<span>'. __('One', 'blankslate' ) .'</span> '. __('Trackback', 'blankslate') ); ?></h3>
+		<ul>
+			<?php wp_list_comments('type=pings&callback=blankslate_custom_pings'); ?>
+		</ul>
+	</div>
+		<?php endif; ?>
+		<?php endif; ?>
+		<?php if ( comments_open() ) : ?>
+	<div>
+		<?php comment_form(); ?>
+	</div>
+	
+	<?php endif; ?>
 </div>

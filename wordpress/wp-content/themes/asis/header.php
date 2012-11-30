@@ -4,7 +4,10 @@
 		<meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
 		
 		<title><?php wp_title(' | ', true, 'right'); ?></title>
-	
+		
+		<meta name="robots" content="noindex,nofollow">
+		
+<!-- 		<?php wp_head(); ?> -->
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 		
 		<?php if(is_single()){ ?>
@@ -13,7 +16,6 @@
 		
 		<?php } ?>
 		
-		<?php wp_head(); ?>
 	
 	</head>
 	
