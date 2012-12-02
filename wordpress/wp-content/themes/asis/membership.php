@@ -107,43 +107,12 @@
 			
 			
 		
-			$members_template2 = '<div>
-			<h4><a href="'.$members_value->guid.'">'.$members_value->post_title.'</a><span class="post-author">Posted on '.$newDate_members.' by '.$members_user['nickname'][0].'</span></h4>
-			'.apply_filters('the_content', $members_value->post_content).'
-			</div>';
 			
-		/* Places the $coverage_TEMPLATE onto the page for each coverage_VALUE in coverage_ARRAY // Max of 5 */
+		/* Places the $MEMBERS_TEMPLATE onto the page for each $MEMBERS_VALUE in $MEMBERS_ARRAY // Max of 5 */
 			echo $members_template;					
 		} ?>
 <!-- end of FOREACH -->
 		
-		
-			
-		<!--
-<ul class="asis_member">
-			<li class="name">Jon R. Bartlee</li>
-			<li class="post-author">Deputy Sheriff</li>
-			<li class="phone_number">407-617-2389</li>
-			<li class="email_address">jon.bartley@ocfl.net</li>
-			<li class="work">Orange Count Sheriff Office</li>
-		</ul>
-		
-		<ul class="asis_member">
-			<li class="name">Jeffery K. Gilchriest</li>
-			<li class="post-author">CEO</li>
-			<li class="phone_number">321-266-1269</li>
-			<li class="email_address">j.gilchriest@opaquesecurity.com</li>
-			<li class="work">Opaque Security LLC</li>
-		</ul>
-		
-		<ul class="asis_member">
-			<li class="name">Gregory A. Higgins</li>
-			<li class="post-author">Dir EH&5</li>
-			<li class="phone_number">407-688-6168</li>
-			<li class="email_address">ghiggins@mpshq.com</li>
-			<li class="work">Intl Security Mitsubishi Power Sys</li>
-		</ul>
--->
 		
 		<h3><span class="title-section">Join Our Community</span></h3>
 		<?php 

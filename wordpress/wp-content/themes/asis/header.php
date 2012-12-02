@@ -2,18 +2,18 @@
 <html <?php language_attributes(); ?>>
 	<head>
 		<meta http-equiv="content-type" content="<?php bloginfo('html_type'); ?>; charset=<?php bloginfo('charset'); ?>" />
-		
-		<title><?php wp_title(' | ', true, 'right'); ?></title>
-		
 		<meta name="robots" content="noindex,nofollow">
 		
-<!-- 		<?php wp_head(); ?> -->
+		<title><?php wp_title(' | ', true, 'right'); ?></title>
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 		
-		<?php if(is_single()){ ?>
 		
-		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/post.css" />
+		<?php if(is_home( 'home.php' )){		/* HOMEPAGE CSS */ ?>
+			<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/css/homepage.css" />
+		<?php } ?>
 		
+		<?php if(is_single()){					/* SINGLE POST CSS */ ?>
+			<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/post.css" />
 		<?php } ?>
 		
 	

@@ -148,7 +148,7 @@ body {
 
 p {
 	letter-spacing: 0.1em;
-	line-height: 1.7em;
+	line-height: 1.5em;
 	overflow: auto;
 }
 
@@ -188,15 +188,13 @@ a:hover {
 
 /* Content Columns */
 .main_column {
-	padding-left: 40px;
-	padding-right: 30px;
+	padding: 60px 30px 0 40px;
 	width: 528px;
 	float: left;
 }
 
 aside {
-	padding-left: 30px;
-	padding-right: 40px;
+	padding: 60px 40px 0 30px;
 	width: 292px;
 	float: left;
 }
@@ -210,19 +208,12 @@ aside p {
 	font-size: 1.4em;
 }
 
-	/* Dividers that have content immediately after them */
-/*
-h3 + p, h3 + img, h3 + ul {
-	margin-top: 30px;
-}
-*/
-
 
 /* Divders for content on a page */
 
 	/* Current Page Title */
 h2 {
-	margin: 60px 0 15px;
+	margin-bottom: 15px;
 	font-size: 2.9em;
 	font-family: 'droid_sansbold', sans-serif;
 }
@@ -402,58 +393,6 @@ nav ul li .sub-menu {
 }
 
 
-/* Board of directors Styles ============================================================================ */
-#directors {
-	margin-top: 60px;
-	padding: 0 40px;
-	overflow: hidden;
-	letter-spacing: 0;
-}
-
-.director_container > ul {
-	margin-left: 20px;
-	width: 205px;
-	float: left;
-
-}
-
-.director_container > ul:first-child {
-	margin-left: 0;
-}
-
-.name, .phone_number, .email_address, .work {
-	letter-spacing: 0;
-	line-height: 1.3em;	
-	font-size: 1.4em;
-}
-
-.position {
-	color: #B55600;
-	font-family: 'droid_sansbold', sans-serif;
-	font-size: 1.6em;
-}
-
-.name {
-	font-size: 1.8em;
-	font-family: 'droid_serifbold', sans-serif;
-}
-
-.post-author, .email_address {
-	margin-bottom: 10px;
-}
-
-.work {
-	font-size: 1.2em;
-}
-
-h4 {
-	line-height: 1.2em;	
-}
-
-.director_container {
-	padding-top: 25px;
-}
-
 
 /* Side Column Styles ============================================================================ */
 
@@ -478,56 +417,6 @@ h4 {
 
 aside ul {
 	margin-bottom: 40px;
-}
-
-
-/* Awards styling */
-.awards {
-	font-family: 'droid_sansregular', sans-serif;
-	font-size: 1.4em;
-	line-height: 1.2em;
-}
-
-strong {
-	font-family: 'droid_sansbold';
-}
-
-.awards li {
-	margin-bottom: 10px;
-}
-
-/* Upcoming Events styling */
-.upcoming_post > h4 {
-	font-size: 1.7em;
-}
-
-.upcoming_post p {
-	margin-bottom: 10px;
-	font-size: 1.3em;
-}
-
-.upcoming-date {
-	padding: 2px 4px;
-	margin-right: 5px;
-	background: #003366;
-	color: #f7f7f7;
-	font-family: 'droid_sansbold';
-	font-size: 0.8em;
-	letter-spacing: 0.1em;
-	display: inline-block;
-	position: relative;
-	top: -2px;
-}
-
-	/* If there is an img in front of an H4, have less margin-top */
-img + h4 {
-	margin-top: 10px;
-}
-
-.links_logo {
-	margin: 0 auto;
-	margin-top: 20px;
-	display: block;
 }
 
 

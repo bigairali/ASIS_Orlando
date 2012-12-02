@@ -82,14 +82,38 @@ array {
 		</div>';
 		
 	/* Places the $coverage_TEMPLATE onto the page for each coverage_VALUE in coverage_ARRAY // Max of 5 */
-		echo $coverage_template;					
+		echo $coverage_template;
 	} ?>
 <!-- end of FOREACH -->	
 	
 
+
 </div>
 			
 	<aside>
+		
+		<div id='new_award'>
+			<img id='award' src="/asis_images/award.png" />
+			<p><strong><?=get_field('award_title', $page_data->ID ); ?></strong></p>
+			<p><?=get_field('award_description', $page_data->ID ); ?></p>
+		</div>
+		
+		<?php 
+		
+		/* HOMEPAGE/AWARDS page ID number */
+			$awards_id = 176; 
+			
+		/* Get the HOMEPAGE/AWARDS data for use */
+			$awards_data = get_page( $awards_id ); 
+		?>
+
+		<!--
+<div class="awards">
+			<?php echo apply_filters('the_content', $awards_data->post_content); ?>
+		</div>
+-->
+
+	
 		<h3><span class="title-section">Join Our Community</span></h3>
 		<p><?=get_post_meta($page_data->ID, 'join_community', true); ?></p>
 		
@@ -132,29 +156,7 @@ array {
 	} ?>
 <!-- end of FOREACH -->	
 		
-<!--
-		<h4><span class="upcoming-date">20 Sept</span>Outing - Tickets are free to members of ASIS</h4>
-		<p>Ten seats are available and transportation has been arranged through Greg Moore. At 6:00PM, van pickup at the Mall of Millenia. Game starts at 7:00pm and group will be taken back to their vehicles at the end of the game.</p>
-		<p>Tickets are free for members.</p>
-		<p>If you wish to attend email: doug.sarubbi@ocfl.net</p>
--->
-		
-		<h3><span class="title-section">Awards</span></h3>
-		
-		<?php 
-		
-		/* HOMEPAGE/AWARDS page ID number */
-			$awards_id = 176; 
-			
-		/* Get the HOMEPAGE/AWARDS data for use */
-			$awards_data = get_page( $awards_id ); 
-			
-		?>
-
-		<div class="awards">
-			<?php echo apply_filters('the_content', $awards_data->post_content); ?>
-		</div>
-	</aside>
+		</aside>
 	
 	<div class="clear"></div>
 	
