@@ -23,7 +23,7 @@
 	</div>
 	
 	<aside>
-		<?php get_field('side_column', $page_id); ?>
+		<?=get_field('side_column', $page_id); ?>
 	</aside>
 	
 	

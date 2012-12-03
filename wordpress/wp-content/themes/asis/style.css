@@ -200,6 +200,10 @@ aside {
 	float: left;
 }
 
+aside > h3:first-child {
+	margin-top: 0;
+}
+
 /* Font Sizing */
 .main_column p {
 	font-size: 1.6em;
@@ -252,7 +256,7 @@ h4 {
 	/* Titled Sections */
 .title-section {
 	padding: 8px;
-	padding-bottom: 0;
+	padding-bottom: 1px;
 	background: #333333;
 	color: #f7f7f7;
 	font-family: 'droid_sansbold', sans-serif;
@@ -428,8 +432,9 @@ nav ul li .sub-menu {
 	font-family: 'droid_sansbold', sans-serif;
 	font-size: 1.6em;
 	letter-spacing: 0;
+	text-align: center;
 	text-decoration: none;
-	display: inline-block;
+	display: block;
 }
 
 .member:hover {

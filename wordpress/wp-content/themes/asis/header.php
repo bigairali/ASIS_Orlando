@@ -12,7 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 		
 		
-		<?php if(is_home( 'home.php' )){		/* HOMEPAGE CSS */ ?>
+		<?php if(is_home() || is_page_template('membership.php')){		/* HOMEPAGE CSS */ ?>
 			<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/css/homepage.css" />
 		<?php } ?>
 		

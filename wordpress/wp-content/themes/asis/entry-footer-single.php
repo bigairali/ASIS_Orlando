@@ -1,6 +1,6 @@
 <div class="entry-footer">
 <?php 
-printf( __( 'This article was posted in %1$s%2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>. Follow comments with the <a href="%5$s" title="Comments RSS to %4$s" rel="alternate" type="application/rss+xml">RSS feed for this post</a>.', 'blankslate' ),
+printf( __( 'This article was posted in %1$s%2$s. Bookmark the <a href="%3$s" title="Permalink to %4$s" rel="bookmark">permalink</a>. Follow comments with the <a href="%5$s" title="Comments RSS to %4$s" rel="alternate" type="application/rss+xml">RSS feed for this post</a>. ', 'blankslate' ),
 get_the_category_list(', '),
 get_the_tag_list( __( ' and tagged ', 'blankslate' ), ', ', '' ),
 get_permalink(),

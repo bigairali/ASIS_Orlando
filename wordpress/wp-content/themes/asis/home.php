@@ -117,7 +117,7 @@ array {
 		<h3><span class="title-section">Join Our Community</span></h3>
 		<p><?=get_post_meta($page_data->ID, 'join_community', true); ?></p>
 		
-		<p><a class="member" href="#">Become a Member</a></p>
+		<p><a class="member" href="https://www.asisonline.org/store/membership.html">Become a Member</a></p>
 		
 		<h3><span class="title-section">Upcoming Events</span></h3>
 

@@ -26,7 +26,7 @@ if ( post_password_required() ) :
 
 	<div id="comments-list" class="comments">
 
-		<h5><?php echo ($comment_count > 1 ? $comment_count.' '. __('Comments', 'blankslate') : __( 'One', 'blankslate' ) . __('Comment', 'blankslate') ); ?></h4>
+		<h5><?php echo ($comment_count > 1 ? $comment_count.' '. __(' Comments', 'blankslate') : __( 'One', 'blankslate' ) . __(' Comment', 'blankslate') ); ?></h4>
 		<p>These are user comments and are not associated with ASIS International.</p>
 		
 		<?php $total_pages = get_comment_pages_count(); if ( $total_pages > 1 ) : ?>

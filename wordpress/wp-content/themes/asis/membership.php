@@ -125,7 +125,7 @@
 			
 		?>
 		
-		<p><?=get_post_meta($join_data->ID, 'join_community', true); ?><a class="member" href="#">Become a Member</a></p>
+		<p><?=get_post_meta($join_data->ID, 'join_community', true); ?><a class="member" href="https://www.asisonline.org/store/membership.html">Become a Member</a></p>
 	</aside>
 	
 	
