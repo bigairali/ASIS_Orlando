@@ -5,6 +5,10 @@
 		<meta name="robots" content="noindex,nofollow">
 		
 		<title><?php wp_title(' | ', true, 'right'); ?></title>
+		
+		<?php wp_enqueue_script("jquery"); ?>
+		<?php wp_head(); ?>
+		
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 		
 		
