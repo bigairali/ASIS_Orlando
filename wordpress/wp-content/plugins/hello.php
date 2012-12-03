@@ -14,34 +14,14 @@ Author URI: http://ma.tt/
 
 function hello_dolly_get_lyric() {
 	/** These are the lyrics to Hello Dolly */
-	$lyrics = "Hello, Dolly
-Well, hello, Dolly
-It's so nice to have you back where you belong
-You're lookin' swell, Dolly
-I can tell, Dolly
-You're still glowin', you're still crowin'
-You're still goin' strong
-We feel the room swayin'
-While the band's playin'
-One of your old favourite songs from way back when
-So, take her wrap, fellas
-Find her an empty lap, fellas
-Dolly'll never go away again
-Hello, Dolly
-Well, hello, Dolly
-It's so nice to have you back where you belong
-You're lookin' swell, Dolly
-I can tell, Dolly
-You're still glowin', you're still crowin'
-You're still goin' strong
-We feel the room swayin'
-While the band's playin'
-One of your old favourite songs from way back when
-Golly, gee, fellas
-Find her a vacant knee, fellas
-Dolly'll never go away
-Dolly'll never go away
-Dolly'll never go away again";
+	$lyrics = "Watch your thoughts, for they become words.
+Watch your words, for they become actions.
+Watch your actions, for they become habits.
+Watch your habits, for they become character.
+Watch your character, for it becomes your destiny.
+I've felt many of things and will feel many more. It's part of living.
+But I know I have my family, I know I've made great friends, I know I will reach my goals, and I know how to smile.
+The rest is just part of the story that I call my life.";
 
 	// Here we split it into lines
 	$lyrics = explode( "\n", $lyrics );

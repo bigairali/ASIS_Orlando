@@ -282,6 +282,7 @@ function nggCreateGallery($picturelist, $galleryID = false, $template = '', $ima
 	// pre set thumbnail size, from the option, later we look for meta data. 
     $thumbsize = ($ngg_options['thumbfix']) ? $thumbsize = 'width="' . $thumbwidth . '" height="'.$thumbheight . '"' : '';
     
+/*
     // show slideshow link
     if ($galleryID) {
         if ($ngg_options['galShowSlide']) {
@@ -295,6 +296,7 @@ function nggCreateGallery($picturelist, $galleryID = false, $template = '', $ima
             $gallery->piclens_link = "javascript:PicLensLite.start({feedUrl:'" . htmlspecialchars( nggMediaRss::get_gallery_mrss_url($gallery->ID) ) . "'});";
         }
     }
+*/
 
     // check for page navigation
     if ($maxElement > 0) {
