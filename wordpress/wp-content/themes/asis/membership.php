@@ -79,6 +79,7 @@
 <!-- FOREACH post in the Member News, make a post of the most recent posts up to a cap of 5 -->
 		<?php 
 		foreach($members_array as $members_value){
+			$html = "";
 		
 			$members_post_id = $members_value->ID;
 			$members_date = get_post_meta($members_post_id, 'event_date', true);
@@ -95,18 +96,15 @@
 			$new_member_email = get_field('new_member_email', $members_post_id);
 			$new_member_workplace = get_field('new_member_workplace', $members_post_id);
 			
+		/* Prevents empty tags from being generated */
+			if($new_member_name) $html = $html.'<li class="name">'.$new_member_name.'</li>' ;
+			if($new_member_title) $html = $html.'<li class="post-author">'.$new_member_title.'</li>' ;
+			if($new_member_phone) $html = $html.'<li class="phone_number">'.$new_member_phone.'</li>' ;
+			if($new_member_email) $html = $html.'<li class="email_address">'.$new_member_email.'</li>' ;
+			if($new_member_workplace) $html = $html.'<li class="work">'.$new_member_workplace.'</li>' ;
+			
 		/* This is the HTML template styled for the use of posts */
-			$members_template = '<ul class="asis_member">
-									<li class="name">'.$new_member_name.'</li>
-									<li class="post-author">'.$new_member_title.'</li>
-									<li class="phone_number">'.$new_member_phone.'</li>
-									<li class="email_address">'.$new_member_email.'</li>
-									<li class="work">'.$new_member_workplace.'</li>
-								</ul>';
-								
-			
-			
-		
+			$members_template = '<ul class="asis_member">'.$html.'</ul>';		
 			
 		/* Places the $MEMBERS_TEMPLATE onto the page for each $MEMBERS_VALUE in $MEMBERS_ARRAY // Max of 5 */
 			echo $members_template;					

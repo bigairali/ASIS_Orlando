@@ -8,6 +8,7 @@
 		var val = $(value);
 		var has_title = val.find('span').hasClass('title-section');
 		
+		console.log(title_sections);
 
 		/* IF there is no span tag then make one and put the orginal HTML text in it */
 		if(!has_title){

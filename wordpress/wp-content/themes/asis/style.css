@@ -146,7 +146,7 @@ body {
 	font-size: 10px;
 }
 
-p, ul {
+p {
 	margin-bottom: 20px;
 	letter-spacing: 0.1em;
 	line-height: 1.5em;
@@ -213,7 +213,8 @@ aside p {
 	font-size: 1.4em;
 }
 
-.main_column a, aside a {
+.main_column a,
+aside a {
 	color: #003366;
 }
 
@@ -276,9 +277,7 @@ h4 {
 	display: inline-block;
 }
 
-strong {
-	font-weight: bold;
-}
+
 
 
 /* Header Styles ============================================================================ */
@@ -301,6 +300,11 @@ h1 a {
 	background: url("images/logo.png") no-repeat;
 }
 
+.main_column a:hover, 
+aside a:hover {
+	color: #B55600;
+}
+
 nav {
 	float: right;
 	overflow: visible;
@@ -315,7 +319,7 @@ nav a{
 	text-decoration: none;
 }
 
-nav a:hover{
+nav a:hover {
 	text-decoration: none;
 }
 
@@ -412,15 +416,25 @@ nav ul li .sub-menu {
 	margin-bottom: 40px;
 }
 
-.leo_awards, .main_column ul {
+.leo_awards,
+.main_column ul,
+aside ul {
 	list-style-type: disc;	
 	list-style-position: inside;
 }
 
-.leo_awards li, .main_column li {
+.asis_member {
+	list-style-type: none;	
+	list-style-position: none;
+}
+
+.leo_awards li,
+.main_column li,
+aside li {
 	margin-bottom: 10px;
 	padding-left: 10px;
-	font-size: 1.6em;	
+	font-size: 1.6em;
+	line-height: 1.4em;
 }
 
 .member {
@@ -447,6 +461,9 @@ aside ul {
 	margin-bottom: 40px;
 }
 
+ul li a {
+	text-decoration: none;
+}
 
 /* Blockquote Styles ============================================================================ */
 .the_quote {
@@ -527,14 +544,17 @@ footer h6 {
 	border-bottom: 2px solid #709FB3;
 }
 
-footer p, footer div, footer a {
+footer p,
+footer div,
+footer a {
 	font-size: 1.1em;
 	letter-spacing: 0;
 	line-height: 1.3em;
 }
 
 
-footer p, footer div {
+footer p,
+footer div {
 	color: #709FB3;
 }
 	
@@ -582,40 +602,15 @@ footer p:first-child {
 
 
 
-/* CERTIFICATIONS ======================================================= */
-.certifications {
-	padding: 100px 40px 0 40px;
-	background: url(/asis_images/shadow.png) no-repeat center 50px;
-	font-size: 1.4em;
-	letter-spacing: 0;
-	clear: both;
-}
-
-.certifications div {
-	width: 280px;
-	padding-left: 20px;
-	float: left;
-}
-
-.certifications div:first-child {
-	padding-left: 0;
-}
-
-.aligncenter {
-	margin: 0 auto;
-	display: block;
-}
 
 
 
-
-
+ 
 
 /* Clearfix */
 .clearfix:after,
 #menu-asis_menu:after,
-.entry-content:after,
-.certifications:after {
+.entry-content:after {
 	content: ".";
 	display: block;
 	clear: both;
@@ -626,21 +621,18 @@ footer p:first-child {
  
 .clearfix,
 #menu-asis_menu,
-.entry-content,
-.certifications {
+.entry-content {
 	display: inline-block;
 }
  
 html[xmlns] .clearfix,
 html[xmlns] #menu-asis_menu,
-html[xmlns] .entry-content,
-html[xmlns] .certifications {
+html[xmlns] .entry-content {
 	display: block;
 }
  
 * html .clearfix,
 * html #menu-asis_menu,
-* html .entry-content,
-* html .certifications {
+* html .entry-content {
 	height: 1%;
 }

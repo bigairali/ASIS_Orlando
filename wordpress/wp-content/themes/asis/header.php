@@ -20,6 +20,11 @@
 			<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/post.css" />
 		<?php } ?>
 		
+		
+		
+		<!--[if lt IE 9]>
+			<script src="<?php bloginfo('template_url'); ?>js/html5shiv.js"></script>
+		<![endif]-->
 	
 	</head>
 	
