@@ -20,6 +20,9 @@
 			<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/post.css" />
 		<?php } ?>
 		
+		<?php if(is_home() || is_page_template('certification.php')){		/* CERTIFICATION CSS */ ?>
+			<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/css/certification.css" />
+		<?php } ?>
 		
 		
 		<!--[if lt IE 9]>
@@ -30,10 +33,10 @@
 	
 	<body <?php body_class(); ?>>
 	
-	
-	
+	<?php /* Blue background */ ?>
 	<div id="container">
 		
+		<?php /* White background */ ?>
 		<section id="main">
 			<header class="clearfix">
 				<h1><a href="<?php echo home_url() ?>/" title="<?php bloginfo( 'name' ) ?>" rel="home"><?php bloginfo( 'name' ) ?></a></h1>

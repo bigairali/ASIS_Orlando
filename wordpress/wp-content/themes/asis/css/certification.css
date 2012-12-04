@@ -1,0 +1,30 @@
+.certifications {
+	padding: 140px 40px 0 40px;
+	clear: both;
+	background: url(/asis_images/shadow.png) no-repeat center 90px;
+}
+
+.certifications div {
+	width: 280px;
+	margin-left: 20px;
+	font-size: 1.4em;
+	float: left;
+}
+
+.certifications div p {
+	letter-spacing: 0;
+}
+
+.certifications div:first-child {
+	margin-left: 0;
+}
+
+.aligncenter {
+	margin: 0 auto;
+	display: block;
+}
+
+strong {
+	font-size: 1.1em;
+	font-weight: bold;
+}
