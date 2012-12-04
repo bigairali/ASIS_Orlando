@@ -276,7 +276,9 @@ h4 {
 	display: inline-block;
 }
 
-
+strong {
+	font-weight: bold;
+}
 
 
 /* Header Styles ============================================================================ */
@@ -580,13 +582,40 @@ footer p:first-child {
 
 
 
+/* CERTIFICATIONS ======================================================= */
+.certifications {
+	padding: 100px 40px 0 40px;
+	background: url(/asis_images/shadow.png) no-repeat center 50px;
+	font-size: 1.4em;
+	letter-spacing: 0;
+	clear: both;
+}
 
- 
+.certifications div {
+	width: 280px;
+	padding-left: 20px;
+	float: left;
+}
+
+.certifications div:first-child {
+	padding-left: 0;
+}
+
+.aligncenter {
+	margin: 0 auto;
+	display: block;
+}
+
+
+
+
+
 
 /* Clearfix */
 .clearfix:after,
 #menu-asis_menu:after,
-.entry-content:after {
+.entry-content:after,
+.certifications:after {
 	content: ".";
 	display: block;
 	clear: both;
@@ -597,18 +626,21 @@ footer p:first-child {
  
 .clearfix,
 #menu-asis_menu,
-.entry-content {
+.entry-content,
+.certifications {
 	display: inline-block;
 }
  
 html[xmlns] .clearfix,
 html[xmlns] #menu-asis_menu,
-html[xmlns] .entry-content {
+html[xmlns] .entry-content,
+html[xmlns] .certifications {
 	display: block;
 }
  
 * html .clearfix,
 * html #menu-asis_menu,
-* html .entry-content {
+* html .entry-content,
+* html .certifications {
 	height: 1%;
 }

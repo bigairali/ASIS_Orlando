@@ -34,7 +34,7 @@
 	<aside>
 		<h3><span class="title-section">ASIS International</span></h3>
 		<p>ASIS Internation is the largest organization advancing security profession worldwide. Click below to learn more.</p>
-		<a href="http://www.asisonline.org"><img class="links_logo" src="/asis_images/links_logo.png" alt="ASIS International Logo" /></a>
+		<a href="http://www.asisonline.org"><img class="links_logo aligncenter" src="/asis_images/links_logo.png" alt="ASIS International Logo" /></a>
 	
 		<h3><span class="title-section">Community Links</span></h3>
 		<div class="security_links">

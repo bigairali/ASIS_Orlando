@@ -35,7 +35,7 @@ $req = get_option( 'require_name_email' );
 $required_text = sprintf( ' ' . __('Required fields are marked %s', 'blankslate'), '<span class="required">*</span>' );
 $args['comment_notes_before'] = '<p class="comment-notes">' . __('Your email is kept private.', 'blankslate') . ( $req ? $required_text : '' ) . '</p>';
 $args['title_reply'] = __('Post a Comment', 'blankslate');
-$args['title_reply_to'] = __('Post a Reply to %s', 'blankslate');
+$args['title_reply_to'] = __('Post a Reply %s', 'blankslate');
 return $args;
 }
 add_action( 'init', 'blankslate_set_default_widgets' );
