@@ -32,11 +32,10 @@
 	</div>
 	
 	<aside>
-		<h3><span class="title-section">ASIS International</span></h3>
-		<p>ASIS Internation is the largest organization advancing security profession worldwide. Click below to learn more.</p>
-		<a href="http://www.asisonline.org"><img class="links_logo aligncenter" src="/asis_images/links_logo.png" alt="ASIS International Logo" /></a>
+
 	
-		<h3><span class="title-section">Community Links</span></h3>
+		<!--
+<h3><span class="title-section">Community Links</span></h3>
 		<div class="security_links">
 			<ul>
 				<li><a href="http://www.fdle.state.fl.us/Content/getdoc/b7a685fa-62f2-4c24-9549-fde6ffa80237/Legislative-Summaries.aspx">Florida Department of Law Enforcement Legislative Summaries</a></li>
@@ -44,6 +43,7 @@
 				<li><a href="http://www.asisonline.org/foundation/noframe/about.html">ASIS Foundation</a></li>
 			</ul>
 		</div>
+-->
 	</aside>
 	
 	<div class="clear"></div>

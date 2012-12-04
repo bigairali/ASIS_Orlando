@@ -146,7 +146,7 @@ body {
 	font-size: 10px;
 }
 
-p {
+p, ul {
 	margin-bottom: 20px;
 	letter-spacing: 0.1em;
 	line-height: 1.5em;
