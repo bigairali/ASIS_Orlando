@@ -56,6 +56,12 @@
 			echo $photos_template;					
 		} ?>
 <!-- end of FOREACH -->
+
+
+
+
+
+
 	</div>
 	
 	<aside>

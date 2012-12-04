@@ -42,8 +42,10 @@ class WP_Admin_Bar {
 			$header_callback = $admin_bar_args[0]['callback'];
 		}
 
+/*
 		if ( empty($header_callback) )
 			$header_callback = '_admin_bar_bump_cb';
+*/
 
 		add_action('wp_head', $header_callback);
 

@@ -415,7 +415,7 @@ nav ul li .sub-menu {
 	list-style-position: inside;
 }
 
-.leo_awards li, .main_column ul li {
+.leo_awards li, .main_column li {
 	margin-bottom: 10px;
 	padding-left: 10px;
 	font-size: 1.6em;	
@@ -483,9 +483,12 @@ cite {
 
 /* Links Page Styles ============================================================================ */
 
+.security_links ul {
+	list-style-type: none;
+}
 
 aside .security_links a {
-	font-size: 1.6em;
+	font-size: 1.4em;
 }
 
 .security_links a {
@@ -496,7 +499,8 @@ aside .security_links a {
 
 .security_links li {
 	padding-left: 10px;
-	background: url(images/right_arrow.png) no-repeat left 9px;
+	font-size: 1.2em;
+	background: url(images/right_arrow.png) no-repeat left 11px;
 }
 
 .security_links a:hover {
