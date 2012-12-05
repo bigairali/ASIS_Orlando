@@ -6,22 +6,24 @@
 		
 		<title><?php wp_title(' | ', true, 'right'); ?></title>
 		
-		<?php wp_enqueue_script("jquery"); ?>
+		<?php wp_enqueue_script("jquery"); /* LOADS CSS */ ?>
 		<?php wp_head(); ?>
 		
 		<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" />
 		
-		
-		<?php if(is_home() || is_page_template('membership.php')){		/* HOMEPAGE CSS */ ?>
-			<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/css/homepage.css" />
+		<?php /* if the current page is HOME or MEMBERSHIP then load this CSS */ ?>
+		<?php if(is_home() || is_page_template('membership.php')) { ?>
+			<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/homepage.css" />
 		<?php } ?>
 		
-		<?php if(is_single()){					/* SINGLE POST CSS */ ?>
+		<?php /* if the current page is a view of a SINGLE post then load this CSS */ ?>
+		<?php if(is_single()) { ?>
 			<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/post.css" />
 		<?php } ?>
 		
-		<?php if(is_home() || is_page_template('certification.php')){		/* CERTIFICATION CSS */ ?>
-			<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url')?>/css/certification.css" />
+		<?php /* if the current page is CERTIFICATION then load this CSS */ ?>
+		<?php if(is_page_template('certification.php')) { ?>
+			<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/certification.css" />
 		<?php } ?>
 		
 		
