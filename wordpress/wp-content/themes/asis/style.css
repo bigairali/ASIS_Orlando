@@ -168,6 +168,20 @@ a:hover {
 	text-decoration: underline;
 }
 
+/* Links/Hover Links styling */
+.main_column a,
+aside a,
+.certifications a {
+	color: #003366;
+}
+
+.main_column a:hover, 
+aside a:hover,
+.certifications a:hover {
+	color: #B55600;
+}
+
+
 .header_image {
 	display: block;
 }
@@ -213,10 +227,7 @@ aside p {
 	font-size: 1.4em;
 }
 
-.main_column a,
-aside a {
-	color: #003366;
-}
+
 
 
 /* Divders for content on a page */
@@ -310,11 +321,6 @@ h1 a {
 	overflow: hidden;
 	text-indent: -9999px;
 	background: url("images/logo.png") no-repeat;
-}
-
-.main_column a:hover, 
-aside a:hover {
-	color: #B55600;
 }
 
 nav {

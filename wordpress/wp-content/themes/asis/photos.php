@@ -26,7 +26,7 @@
 		<?php add_action( 'pre_get_posts', 'function_name' ); ?>
 		
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><span class="post-author">Posted <?php the_time(); ?> by <?php the_author(); ?></span></h4>
+			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><span class="post-author">Posted <?php the_date(); ?> by <?php the_author(); ?></span></h4>
 		   <?php the_excerpt(); ?>
 		<?php endwhile; endif; ?>
 	</div>

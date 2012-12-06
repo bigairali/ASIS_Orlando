@@ -11,8 +11,8 @@
 			<div>
 				<h6>Member Services</h6>
 				<ul class="services">
-					<li><a href="#">Pay Dues</a></li>
-					<li><a href="#">Attend a Meeting</a></li>
+					<li><a href="http://127.0.0.1/ASIS_Orlando/wordpress/?page_id=348">Pay Dues</a></li>
+					<li><a href="http://127.0.0.1/ASIS_Orlando/wordpress/?page_id=348">Attend a Meeting</a></li>
 					<li><a href="wp-admin">Admin</a></li>
 				</ul>
 			</div>
