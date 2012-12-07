@@ -20,8 +20,8 @@
 #directors {
 	margin-top: 60px;
 	padding: 0 40px;
-	overflow: hidden;
 	letter-spacing: 0;
+	clear: both;
 }
 
 .director_container > ul {
@@ -117,4 +117,28 @@ img + h4 {
 	margin: 0 auto;
 	margin-top: 20px;
 	display: block;
+}
+
+
+
+/* Clearfix */
+#directors:after {
+	content: ".";
+	display: block;
+	clear: both;
+	visibility: hidden;
+	line-height: 0;
+	height: 0;
+}
+ 
+#directors {
+	display: inline-block;
+}
+ 
+html[xmlns] #directors {
+	display: block;
+}
+ 
+* html #directors {
+	height: 1%;
 }

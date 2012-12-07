@@ -227,7 +227,11 @@ aside p {
 	font-size: 1.4em;
 }
 
-
+strong {
+	color: #003366;
+	font-family: 'droid_sansbold';
+	font-size: 1.2em;
+}
 
 
 /* Divders for content on a page */

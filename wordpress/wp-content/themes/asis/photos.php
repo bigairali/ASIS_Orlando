@@ -1,8 +1,6 @@
 <?php
 	/*
-	
 		Template Name: Chapter Photos
-	
 	*/
 ?>
 
@@ -22,9 +20,7 @@
 		<?php echo apply_filters('the_content', $page_data->post_content); ?>
 		
 		<?php query_posts('cat=9'); ?>
-		
-		<?php add_action( 'pre_get_posts', 'function_name' ); ?>
-		
+				
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><span class="post-author">Posted <?php the_date(); ?> by <?php the_author(); ?></span></h4>
 		   <?php the_excerpt(); ?>

@@ -28,18 +28,6 @@
 	
 	<aside>
 		<?=get_field('side_column', $page_id); ?>
-		
-		<h3><span class="title-section">Join Our Community</span></h3>
-		<?php 
-		
-		/* HOMEPAGE/JOIN page ID number */
-			$join_id = 17; 
-		/* Get the HOMEPAGE/JOIN data for use */
-			$join_data = get_page( $join_id ); 
-			
-		?>
-		
-		<p><?=get_post_meta($join_data->ID, 'join_community', true); ?><a class="member" href="https://www.asisonline.org/store/membership.html">Become a Member</a></p>
 	</aside>
 	
 	

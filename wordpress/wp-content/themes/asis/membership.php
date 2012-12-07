@@ -19,10 +19,7 @@
 	<img class="header_image" src="/asis_images/sub_lake_eola.jpg" alt="Different angle of Lake Eola" width="960" height="160" />
 
 	<div class="main_column">			
-		<h2>Join the Community</h2>
-		<p>By joining our ASIS Chapter, ASIS International members in Central Florida can participate on the local level. Established July 22, 1969, we have a long history of security professionals who have mad a great impact locally and nationally on our industry. Participating grants members the benefit of joining security and law enforcement professionals in our chapter, the opportunity to network, and keep pace with the latest intel effecting out industries and learning from leading professionals speaking at our monthly meeting. Joining also allows members to get involved from the ground up in ASIS International and working with some of the best people in your community.</p>
-		
-		<p>Our monthly membership meetings are the last Thursday of the month at Maggianos Restaurant at Pointe Orlando, 9101 International Dr. Other than special events, we are closed for November and December.</p>
+		<?php echo apply_filters('the_content', $page_data->post_content); ?>
 		
 		<h3><span class="title-section">Membership Updates</span></h3>
 		

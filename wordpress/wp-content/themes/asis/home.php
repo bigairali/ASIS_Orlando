@@ -21,144 +21,45 @@
 	
 	<h3><span class="title-section">Coverage of ASIS News</span></h3>
 	
-	<?php 
-	/* These are the ARGUMENTS for the get_posts PARAM */
-		$coverage_args = array(
-						'numberposts' => 5,		/* How many posts to pull */
-						'category' => 5			/* ID of Category */
-						);
+<?php /* Beginning of a Wordpress Loop */ ?>
+<?php /* This query is for the Upcoming Events Section of the page */ ?>
+		<?php $coverage_query = new WP_Query('category_name=asis_news&posts_per_page=5'); ?>
 		
-	/* Get posts that match my arguments and put each post in my $COVERAGE_ARRAY variable */
-		$coverage_array = get_posts( $coverage_args ); 
-	?>
+		<?php if ( $coverage_query->have_posts() ) : while ( $coverage_query->have_posts() ) : $coverage_query->the_post(); ?>
+			<div>
+				<h4><?php the_title(); ?><span class="post-author">Posted <?php the_date(); ?> by <?php the_author(); ?></span></h4>
+			   <?php the_content(); ?>
+			</div>
+		<?php endwhile; endif; ?>
 
-<!--	=== This is an example of what is in the $COVERAGE_ARRAY variable. ===
-
-array { 
-	[0] { 
-		["ID"]						=> 35 
-		["post_author"]				=> "1" 
-		["post_date"]				=> "2012-11-25 23:52:15" 
-		["post_date_gmt"]			=> "2012-11-25 23:52:15" 
-		["post_content"]			=> "
-										ASIS Orlando Chapter Board presented Orange County Sheriff Jerry Demings with the prestigious Matthew Simone Award. The Public, Private Partnership Award was announced at the 58th Annual ASIS International Convention held in Philadelphia, Penn. this past September. The award recognizes the partnership between law enforcement and private security." 
-		["post_title"]				=> "ASIS Orlando Presented the Matthew Simone Award" 
-		["post_excerpt"]			=> "" 
-		["post_status"]				=> "publish" 
-		["comment_status"]			=> "open" 
-		["ping_status"]				=> "open" 
-		["post_password"]			=> "" 
-		["post_name"]				=> "asis-orlando-presented-the-matthew-simone-award" 
-		["to_ping"]					=> "" 
-		["pinged"]					=> "" 
-		["post_modified"]			=> "2012-11-25 23:52:15" 
-		["post_modified_gmt"]		=> "2012-11-25 23:52:15" 
-		["post_content_filtered"]	=> "" 
-		["post_parent"]				=> 0 
-		["guid"]					=> "http://127.0.0.1/wordpress/?p=35" 
-		["menu_order"]				=> 0 
-		["post_type"]				=> "post" 
-		["post_mime_type"]			=> "" 
-		["comment_count"]			=> "0" 
-		["filter"]					=> "raw" 
-	} 
-}				
--->
-
-<!-- FOREACH post in the Coverage of ASIS News category, make a post of the most recent posts up to a cap of 5 -->
-	<?php 
-	foreach($coverage_array as $coverage_value){
-	
-	/* Get the data for the user that posted this message */
-		$all_meta_for_user = get_user_meta( $coverage_value->post_author );
-		
-		$originalDate_coverage = $coverage_value->post_date;
-		$newDate_coverage = date("F j, Y", strtotime($originalDate_coverage));
-		
-	/* This is the HTML template styled for the use of posts */
-		$coverage_template = '<div>
-		<h4><a href="'.$coverage_value->guid.'">'.$coverage_value->post_title.'</a><span class="post-author">Posted on '.$newDate_coverage.' by '.$all_meta_for_user['nickname'][0].'</span></h4>
-		'.apply_filters('the_content', $coverage_value->post_content).'
-		</div>';
-		
-	/* Places the $coverage_TEMPLATE onto the page for each coverage_VALUE in coverage_ARRAY // Max of 5 */
-		echo $coverage_template;
-	} ?>
-<!-- end of FOREACH -->	
-	
-
-
-</div>
+	</div>
 			
 	<aside>
-		
 		<div id='new_award'>
 			<img id='award' src="/asis_images/award.png" />
 			<p><strong><?=get_field('award_title', $page_data->ID ); ?></strong></p>
 			<p><?=get_field('award_description', $page_data->ID ); ?></p>
 		</div>
-		
-		<?php 
-		
-		/* HOMEPAGE/AWARDS page ID number */
-			$awards_id = 176; 
-			
-		/* Get the HOMEPAGE/AWARDS data for use */
-			$awards_data = get_page( $awards_id ); 
-		?>
 
-		<!--
-<div class="awards">
-			<?php echo apply_filters('the_content', $awards_data->post_content); ?>
-		</div>
--->
-
-	
 		<h3><span class="title-section">Join Our Community</span></h3>
-		<p><?=get_post_meta($page_data->ID, 'join_community', true); ?></p>
-		
-		<p><a class="member" href="https://www.asisonline.org/store/membership.html">Become a Member</a></p>
+		<p><?=get_post_meta($page_data->ID, 'join_community', true); ?><a class="member" href="https://www.asisonline.org/store/membership.html">Become a Member</a></p>
+	
 		
 		<h3><span class="title-section">Upcoming Events</span></h3>
-
-	<?php 
-	/* These are the ARGUMENTS for the get_posts PARAMETER */
-		$upcoming_args = array(
-						'numberposts' => 5,		/* How many posts to pull */
-						'category' => 7			/* ID of Category */
-						);
 		
-	/* Get posts that match my arguments and put each post in my $UPCOMING_ARRAY variable */
-		$upcoming_array = get_posts( $upcoming_args );
-	?>
-
+<?php /* Beginning of a Wordpress Loop */ ?>
+<?php /* This query is for the Upcoming Events Section of the page */ ?>
+		<?php $upcoming_query = new WP_Query('category_name=upcoming&posts_per_page=10'); ?>
 		
-<!-- FOREACH post in the Upcoming Events, make a post of the most recent posts up to a cap of 5 -->
-	<?php 
-	foreach($upcoming_array as $upcoming_value){
-	
-		$upcoming_post_id = $upcoming_value->ID;
-		$upcoming_date = get_post_meta($upcoming_post_id, 'event_date', true);
-		
-	/* Get the data for the user that posted this message */
-		$upcoming_user = get_user_meta( $upcoming_value->post_author );
-		
-		$originalDate_upcoming = $upcoming_value->post_date;
-		$newDate_upcoming = date("d M", strtotime($originalDate_upcoming));
-		
-	/* This is the HTML template styled for the use of posts */
-		$upcoming_template = 	'<div class="upcoming_post"><h4><span class="upcoming-date">'.$upcoming_date.'</span><a href="'.$upcoming_value->guid.'">'.$upcoming_value->post_title.
-								'</a><span class="post-author">Posted on '.$newDate_upcoming.' by '.$upcoming_user['nickname'][0].'</span></h4>'
-								.apply_filters('the_content', $upcoming_value->post_content).'</div>';
-		
-	/* Places the $coverage_TEMPLATE onto the page for each coverage_VALUE in coverage_ARRAY // Max of 5 */
-		echo $upcoming_template;					
-	} ?>
-<!-- end of FOREACH -->	
-		
+		<?php if ( $upcoming_query->have_posts() ) : while ( $upcoming_query->have_posts() ) : $upcoming_query->the_post(); ?>
+			<div class="upcoming_post">
+				<h4><span class="upcoming-date"><?=get_field('event_date'); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><span class="post-author">Posted <?php the_date(); ?> by <?php the_author(); ?></span></h4>
+			   <?php the_excerpt(); ?>
+			</div>
+		<?php endwhile; endif; ?>
+				
 		</aside>
 	
-	<div class="clear"></div>
 	
 	<div id="directors">
 		<h3><span class="title-section">Board of Directors</span></h3>
