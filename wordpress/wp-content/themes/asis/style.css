@@ -189,6 +189,11 @@ aside a,
 	color: #003366;
 }
 
+.main_column h4 a,
+aside h4 a {
+	color: #333;
+}
+
 .main_column a:hover, 
 aside a:hover,
 .certifications a:hover {
