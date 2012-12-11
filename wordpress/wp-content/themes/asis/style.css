@@ -137,6 +137,7 @@ table {
 
 html {
 	margin: 0;
+	color: #333;
 }
 
 body {
@@ -167,6 +168,19 @@ a {
 a:hover {
 	text-decoration: underline;
 }
+
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+	text-decoration: none;
+}
+
+.comment-reply-link > a {
+	text-decoration: underline;
+}
+
 
 /* Links/Hover Links styling */
 .main_column a,
@@ -203,15 +217,25 @@ aside a:hover,
 
 /* Content Columns */
 .main_column {
-	padding: 60px 30px 0 40px;
+	padding: 40px 30px 0 40px;
 	width: 528px;
 	float: left;
 }
 
 aside {
-	padding: 60px 40px 0 30px;
+	padding: 40px 40px 0 30px;
 	width: 292px;
 	float: left;
+}
+
+.main_comlumn div,
+aside div {
+	margin-bottom: 40px;
+}
+
+.main_column ul,
+aside ul {
+	margin-bottom: 40px;
 }
 
 aside > h3:first-child {
@@ -253,7 +277,7 @@ h3 {
 
 	/* New Titles */
 h4 {
-	margin: 40px 0 10px;
+	margin-bottom: 10px;
 	font-family: 'droid_serifbold', serif;
 	font-size: 2.2em;
 }
@@ -483,9 +507,6 @@ aside ul {
 	margin-bottom: 40px;
 }
 
-ul li a {
-	text-decoration: none;
-}
 
 /* Blockquote Styles ============================================================================ */
 .the_quote {
@@ -568,10 +589,10 @@ footer h6 {
 
 footer p,
 footer div,
-footer a {
+footer li {
 	font-size: 1.1em;
 	letter-spacing: 0;
-	line-height: 1.3em;
+	line-height: 1.4em;
 }
 
 
@@ -585,28 +606,23 @@ footer a {
 	color: #f7f7f7;
 }
 
+footer a:hover {
+	color: #38628c;
+}
+
 footer div {
 	margin-right: 20px;
 	width: 205px;
 	float: left;
 }
 
-footer p:first-child {
-	margin-bottom: 20px;
-}
-
 .social_link {
 	color: #efefef;
-	font-size: 1.2em;
 	line-height: 1em;
 }
 
 .services li {
 	margin-bottom: 5px;
-}
-
-.services li a:hover, .social_link:hover {
-	color: #B55600;
 }
 
 .international {
@@ -621,10 +637,6 @@ footer p:first-child {
 	display: inline-block;
 	float: left;	
 }
-
-
-
-
 
 
  

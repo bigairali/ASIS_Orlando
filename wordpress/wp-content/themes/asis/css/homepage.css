@@ -1,18 +1,18 @@
 /* CSS that should only be loaded on the homepage */
 
-#new_award {
-	overflow: hidden;
-}
-
 #new_award p + p {
 	font-size: 1.2em;
 }
 
+#the_award {
+	min-height: 80px;
+	margin-bottom: 40px;
+}
+
 #award {
-	padding-top: 5px;
 	padding-right: 5px;
 	float: left;
-	display: block;
+	display: inline-block;
 }
 
 
@@ -35,7 +35,10 @@
 	margin-left: 0;
 }
 
-.name, .phone_number, .email_address, .work {
+.name,
+.phone_number,
+.email_address,
+.work {
 	letter-spacing: 0;
 	line-height: 1.3em;	
 	font-size: 1.4em;
@@ -44,7 +47,7 @@
 .position {
 	color: #B55600;
 	font-family: 'droid_sansbold', sans-serif;
-	font-size: 1.6em;
+	font-size: 1.7em;
 }
 
 .name {
@@ -52,7 +55,8 @@
 	font-family: 'droid_serifbold', sans-serif;
 }
 
-.post-author, .email_address {
+.post-author,
+.email_address {
 	margin-bottom: 10px;
 }
 
@@ -69,16 +73,11 @@ h4 {
 }
 
 
-
 /* Awards styling */
 .awards {
 	font-family: 'droid_sansregular', sans-serif;
 	font-size: 1.4em;
 	line-height: 1.2em;
-}
-
-strong {
-	font-family: 'droid_sansbold';
 }
 
 .awards li {
@@ -121,8 +120,10 @@ img + h4 {
 
 
 
+
 /* Clearfix */
-#directors:after {
+#directors:after,
+#new_award:after {
 	content: ".";
 	display: block;
 	clear: both;
@@ -131,14 +132,17 @@ img + h4 {
 	height: 0;
 }
  
-#directors {
+#directors,
+#new_award {
 	display: inline-block;
 }
  
-html[xmlns] #directors {
+html[xmlns] #directors,
+html[xmlns] #new_award {
 	display: block;
 }
  
-* html #directors {
+* html #directors,
+* html #new_award {
 	height: 1%;
 }

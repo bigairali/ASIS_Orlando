@@ -27,7 +27,7 @@
 		
 		<?php if ( $coverage_query->have_posts() ) : while ( $coverage_query->have_posts() ) : $coverage_query->the_post(); ?>
 			<div>
-				<h4><?php the_title(); ?><span class="post-author">Posted <?php the_date(); ?> by <?php the_author(); ?></span></h4>
+				<h4><?php the_title(); ?><span class="post-author">Posted by <?php the_author(); ?></span></h4>
 			   <?php the_content(); ?>
 			</div>
 		<?php endwhile; endif; ?>
@@ -35,16 +35,14 @@
 	</div>
 			
 	<aside>
-		<div id='new_award'>
+		<div id="the_award">
 			<img id='award' src="/asis_images/award.png" />
-			<p><strong><?=get_field('award_title', $page_data->ID ); ?></strong></p>
-			<p><?=get_field('award_description', $page_data->ID ); ?></p>
+			<p class="award_description"><?=get_field('award_description', $page_data->ID ); ?></p>
 		</div>
 
 		<h3><span class="title-section">Join Our Community</span></h3>
 		<p><?=get_post_meta($page_data->ID, 'join_community', true); ?><a class="member" href="https://www.asisonline.org/store/membership.html">Become a Member</a></p>
 	
-		
 		<h3><span class="title-section">Upcoming Events</span></h3>
 		
 <?php /* Beginning of a Wordpress Loop */ ?>
@@ -53,8 +51,9 @@
 		
 		<?php if ( $upcoming_query->have_posts() ) : while ( $upcoming_query->have_posts() ) : $upcoming_query->the_post(); ?>
 			<div class="upcoming_post">
-				<h4><span class="upcoming-date"><?=get_field('event_date'); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><span class="post-author">Posted <?php the_date(); ?> by <?php the_author(); ?></span></h4>
+				<h4><span class="upcoming-date"><?=get_field('event_date'); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><span class="post-author">Posted by <?php the_author(); ?></span></h4>
 			   <?php the_excerpt(); ?>
+			   <p><a href="<?php the_permalink(); ?>">Read More...</a></p>
 			</div>
 		<?php endwhile; endif; ?>
 				
@@ -63,7 +62,6 @@
 	
 	<div id="directors">
 		<h3><span class="title-section">Board of Directors</span></h3>
-<!-- 		<?php var_dump($page_data); ?> -->
 		<div class="director_container">
 			<ul>
 				<?php 
