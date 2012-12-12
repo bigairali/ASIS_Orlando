@@ -10,8 +10,6 @@
 	title_sections.each( function(index, value){
 		var val = $(value);
 		var has_title = val.find('span').hasClass('title-section');
-		
-		console.log(title_sections);
 
 		/* IF there is no span tag then make one and put the orginal HTML text in it */
 		if(!has_title){
@@ -24,42 +22,59 @@
 	
 	
 	
-	
 /* COMMENT ERROR HANDLING */
+	var is_logged_in = $('.logged-in-as')[0];
+	
 
+	
 /* Text Inputs */
 	var author_field = $('#author');
 	var email_field = $('#email');
 	var comment_field = $('#comment');
 	
 /* Form containers */
+	var comment_wrapper = $('#respond');
 	var author_container = $('.comment-form-author');
 	var email_container = $('.comment-form-email');
 	var comment_container = $('.comment-form-comment');
 	
+	
+	console.log(is_logged_in, 'Is the user logged in?');
+	
 /* Event Handling */
 	win.on('submit', '#commentform', function(e){
-		var author_text = author_field.val();
-		var email_text = email_field.val();
-		var comment_text = comment_field.val();
 		
-		var is_error_msg = $('.comment_error');
+		if(!is_logged_in){
+			comment_wrapper.append('<div class="error_box"></div>')
 		
-		
-		if(!comment_text){
-				console.log(is_error_msg[0], 'Error');
-			if(!is_error_msg[0]){
+			var author_text = author_field.val();
+			var email_text = email_field.val();
+			var comment_text = comment_field.val();
+			
+			var is_comment_error = $('.comment_error');
+			var is_email_error = $('.email_error');
+			var is_name_error = $('.name_error');
+			
+			
+			if(!comment_text){
+				if(!is_comment_error[0]){
+					
+					comment_field.css('border', '1px solid rgb(222, 0, 16)');
+					
+					html = '<p class="comment_error"><strong>ERROR</strong>: please type a comment.</p>';
 				
-				comment_field.css('border', '1px solid rgb(222, 0, 16)');
+					comment_container.append(html)
+				};
 				
-				html = '<p class="comment_error"><strong>ERROR</strong>: please type a comment.</p>';
+				return false;			
+			}
+		}else{
 			
-				comment_container.append(html)
-			};
-			
-			
-			return false;			
 		}
+		
+	
+	
+		
 		
 
 	});

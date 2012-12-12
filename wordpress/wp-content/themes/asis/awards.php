@@ -25,7 +25,7 @@
 		<h3><span class="title-section">S.O.A.R. Awards</span></h3>
 		<?=get_field('soar_awards_desc', $page_id); ?>
 		
-		<h3><span class="title-section">Awards and Recognition</span></h3>
+		<h3><span class="title-section">Orlando Chapter Awards</span></h3>
 		<?=get_field('recognition', $page_id); ?>
 	</div>
 	

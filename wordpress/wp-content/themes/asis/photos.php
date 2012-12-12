@@ -22,8 +22,9 @@
 		<?php query_posts('cat=9'); ?>
 				
 		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><span class="post-author">Posted <?php the_date(); ?> by <?php the_author(); ?></span></h4>
+			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><span class="post-author">Posted by <?php the_author(); ?></span></h4>
 		   <?php the_excerpt(); ?>
+		   <p><a href="<?php the_permalink(); ?>">Read More...</a></p>
 		<?php endwhile; endif; ?>
 	</div>
 	

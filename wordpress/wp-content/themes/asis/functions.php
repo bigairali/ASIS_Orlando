@@ -132,7 +132,7 @@ $GLOBALS['comment_depth'] = $depth;
 <div class="comment-author vcard"><?php blankslate_commenter_link() ?></div>
 <div class="comment-meta"><?php printf(__('Posted %1$s at %2$s', 'blankslate' ), get_comment_date(), get_comment_time() ); ?><span class="meta-sep"> | </span> <a href="#comment-<?php echo get_comment_ID(); ?>" title="<?php _e('Permalink to this comment', 'blankslate' ); ?>"><?php _e('Permalink', 'blankslate' ); ?></a>
 <?php edit_comment_link(__('Edit', 'blankslate'), ' <span class="meta-sep"> | </span> <span class="edit-link">', '</span>'); ?></div>
-<?php if ($comment->comment_approved == '0') { echo '\t\t\t\t\t<span class="unapproved">'; _e('Your comment is awaiting moderation.', 'blankslate'); echo '</span>\n'; } ?>
+<?php if ($comment->comment_approved == '0') { echo '<span class="unapproved">'; _e('Your comment is awaiting moderation.', 'blankslate'); echo '</span>'; } ?>
 <div class="comment-content">
 <?php comment_text() ?>
 </div>

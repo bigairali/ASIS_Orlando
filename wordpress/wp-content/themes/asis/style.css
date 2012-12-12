@@ -233,7 +233,7 @@ aside {
 	float: left;
 }
 
-.main_comlumn div,
+.main_column div,
 aside div {
 	margin-bottom: 40px;
 }
@@ -466,16 +466,17 @@ nav ul li .sub-menu {
 	margin-bottom: 40px;
 }
 
-.leo_awards,
-.main_column ul,
-aside ul {
-	list-style-type: disc;	
-	list-style-position: inside;
+.leo_awards li,
+.main_column ul li,
+aside ul li{
+	padding-left: 10px;
+	background: url(images/right_arrow.png) no-repeat left 6px;	
 }
 
-.asis_member {
-	list-style-type: none;	
-	list-style-position: none;
+
+.asis_member li {
+	padding-left: 0;
+	background: none;
 }
 
 .leo_awards li,
@@ -515,8 +516,7 @@ aside ul {
 
 /* Blockquote Styles ============================================================================ */
 .the_quote {
-	border-bottom: 1px solid #484141;
-	border-top: 1px solid #484141;	
+	border-bottom: 1px solid #e6e6e6;
 	margin-top: 40px;
 	padding: 40px 175px 30px;
 	background: #f0f0f0;
@@ -547,34 +547,6 @@ cite {
 }
 
 
-
-/* Links Page Styles ============================================================================ */
-
-.security_links ul {
-	list-style-type: none;
-}
-
-aside .security_links a {
-	font-size: 1.4em;
-}
-
-.security_links a {
-	color: #003366;
-	font-size: 1.3em;
-	line-height: 2em;
-}
-
-.security_links li {
-	padding-left: 10px;
-	font-size: 1.2em;
-	background: url(images/right_arrow.png) no-repeat left 11px;
-}
-
-.security_links a:hover {
-	color: #B55600;
-}
-
-
 /* Footer Styles ============================================================================ */
 
 footer {
@@ -589,7 +561,6 @@ footer h6 {
 	color: #709FB3;
 	font-size: 1.4em;
 	line-height: 1em;
-	border-bottom: 2px solid #709FB3;
 }
 
 footer p,
@@ -643,6 +614,16 @@ footer div {
 	float: left;	
 }
 
+
+/* ERROR404 Styles ============================================================================ */
+.error404 {
+	padding: 40px;
+}
+
+/* Creative Commons Styles ============================================================================ */
+.creative {
+	padding-top: 20px;
+}
 
  
 

@@ -36,7 +36,7 @@
 			
 	<aside>
 		<div id="the_award">
-			<img id='award' src="/asis_images/award.png" />
+			<img id='award' src="<?php bloginfo('template_url'); ?>/images/award.png" />
 			<p class="award_description"><?=get_field('award_description', $page_data->ID ); ?></p>
 		</div>
 

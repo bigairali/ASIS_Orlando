@@ -1,6 +1,6 @@
 /* This is the style for any POSTS that a person may click on */
 #content {
-	padding-top: 60px;
+	padding: 60px 40px;
 }
 
 #main {
@@ -9,33 +9,7 @@
 
 h5 {
 	padding-top: 10px;
-	padding-left: 40px;
 	font-size: 1.8em;
-}
-
-#comments-list {
-	border-top: 1px dashed #333;
-}
-
-#comments-list > p {
-	padding-left: 40px;
-	padding-bottom: 8px;
-}
-
-
-#comments {
-	margin-top: 150px;
-	padding-bottom: 100px;
-}
-
-.post {
-	padding: 0 40px;
-}
-
-#comments-list > ul, #respond {
-	width: 528px;
-	margin-bottom: 40px;
-	padding-left: 40px;
 }
 
 .entry-footer {
@@ -45,6 +19,23 @@ h5 {
 .entry-content {
 	margin: 40px 0;
 	font-size: 1.6em;
+}
+
+/* Border between each comment */
+#comments-list {
+
+	border-top: 1px dashed #333;
+}
+
+#comments {
+	margin-top: 150px;
+	padding-bottom: 100px;
+}
+
+
+#comments-list > ul, #respond {
+	width: 528px;
+	margin-bottom: 40px;
 }
 
 .comment {
@@ -171,6 +162,8 @@ textarea {
 }
 
 /* Error Handling Styles */
+.
+
 .comment_error {
 	width: 505px;
 	padding: 10px;

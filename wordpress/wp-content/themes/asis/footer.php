@@ -20,7 +20,7 @@
 			<div>
 				<h6>Legal</h6>
 				<ul class="services">
-					<li><a href="http://127.0.0.1/ASIS_Orlando/wordpress/?page_id=348">Creative Commons</a></li>
+					<li><a href="http://127.0.0.1/ASIS_Orlando/wordpress/?page_id=483">Creative Commons</a></li>
 				</ul>
 			</div>
 			
@@ -29,13 +29,6 @@
 	</div><!--!/#container -->
 
 	<script type="text/javascript" src="<?php bloginfo('template_url')?>/js/main.js"></script>
-	
-	<!-- google analytics -->
-	<?php
-		if ( function_exists( 'yoast_analytics' ) ) {
-			yoast_analytics();
-		}
-	?>
 	
 <!--
 	<script type="text/javascript">

@@ -2,15 +2,17 @@
 <h2 class="entry-title"><?php the_title(); ?></h2>
 
 <?php 
+/*
 if ( is_single() ) {
 get_template_part( 'entry-footer', 'single' ); 
 } else {
 get_template_part( 'entry-footer' ); 
 }
+*/
 ?>
 
 
-<?php get_template_part( 'entry', 'meta' ); ?>
+<?php /* get_template_part( 'entry', 'meta' ); */ ?>
 
 
 <?php
