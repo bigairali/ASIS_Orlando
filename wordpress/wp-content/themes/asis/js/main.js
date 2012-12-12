@@ -24,8 +24,13 @@
 	
 /* COMMENT ERROR HANDLING */
 	var is_logged_in = $('.logged-in-as')[0];
-	
-
+		
+	var comment_wrapper = $('.comment-notes');
+	var error_box = $('.error_box');
+			
+	if(!error_box[0]){
+		comment_wrapper.append('<ul class="error_box"></ul>');
+	}
 	
 /* Text Inputs */
 	var author_field = $('#author');
@@ -33,7 +38,7 @@
 	var comment_field = $('#comment');
 	
 /* Form containers */
-	var comment_wrapper = $('#respond');
+	
 	var author_container = $('.comment-form-author');
 	var email_container = $('.comment-form-email');
 	var comment_container = $('.comment-form-comment');
@@ -44,30 +49,79 @@
 /* Event Handling */
 	win.on('submit', '#commentform', function(e){
 		
-		if(!is_logged_in){
-			comment_wrapper.append('<div class="error_box"></div>')
+		var author_text = author_field.val();
+		var email_text = email_field.val();
+		var comment_text = comment_field.val();
+
+		if(!is_logged_in && !author_text || !email_text || !comment_text){
+			var remove_msgs = [];
 		
-			var author_text = author_field.val();
-			var email_text = email_field.val();
-			var comment_text = comment_field.val();
-			
-			var is_comment_error = $('.comment_error');
-			var is_email_error = $('.email_error');
 			var is_name_error = $('.name_error');
+			var is_email_error = $('.email_error');
+			var is_comment_error = $('.comment_error');
 			
+			var error_box = $('.error_box');
+						
+		/* Name field error handling */
+			if(!author_text){
 			
-			if(!comment_text){
-				if(!is_comment_error[0]){
-					
+				if(!is_name_error[0]){
 					comment_field.css('border', '1px solid rgb(222, 0, 16)');
 					
-					html = '<p class="comment_error"><strong>ERROR</strong>: please type a comment.</p>';
+					html = '<li class="author_error"><strong>ERROR</strong>: please enter your name.</li>';
 				
-					comment_container.append(html)
-				};
-				
-				return false;			
+					error_box.append(html);					
+				}
+			}else{
+				var error = $('.author_error');
+				remove_msgs.push(error);
 			}
+					
+		/* Email field error handling */
+			if(!email_text){
+			
+				if(!is_email_error[0]){
+					comment_field.css('border', '1px solid rgb(222, 0, 16)');
+					
+					html = '<li class="email_error"><strong>ERROR</strong>: please enter your email.</li>';
+				
+					error_box.append(html);
+				}
+			}else{
+				var error = $('.email_error');
+				remove_msgs.push(error);
+			}
+			
+		/* Comment field error handling */
+			if(!comment_text){
+			
+				if(!is_comment_error[0]){
+					comment_field.css('border', '1px solid rgb(222, 0, 16)');
+					
+					html = '<li class="comment_error"><strong>ERROR</strong>: please enter a comment.</li>';
+				
+					error_box.append(html);
+				}			
+			}else{
+				var error = $('.comment_error');
+				remove_msgs.push(error);
+			}
+			
+			
+			var error_msgs = error_box.find('li');
+			
+			error_msgs.each(function(index, val){
+				var value_item = $(val);
+				value_item.fadeIn();
+			});
+			
+			$.each(remove_msgs, function(index, val){
+				var value_item = $(val);
+				value_item.fadeOut();
+			});
+			
+			return false;
+			
 		}else{
 			
 		}
