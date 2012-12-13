@@ -162,6 +162,11 @@ textarea {
 	border-radius: 10px;
 }
 
+.required {
+	padding-left: 5px;
+	display: inline-block;
+}
+
 /* Error Handling Styles */
 .comment-notes {
 	position: relative;
@@ -169,7 +174,7 @@ textarea {
 }
 
 .error_box {
-	width: 320px;
+	width: 170px;
 	margin-top: 20px;
 	top: 100%;
 	position: absolute;
@@ -179,17 +184,28 @@ textarea {
 
 .author_error,
 .email_error,
-.comment_error {
-	padding: 10px;
-	background: red;
-	color: #f2f2f2;
+.comment_error,
+.comment_error_log {
+	padding: 10px 0;
+	color: rgb(222, 0, 16);
 	display: none;
+	background: url(../images/error.png) no-repeat left center;
+}
+
+.comment_error_log {
+	padding-left: 25px;
+}
+
+.author_error,
+.email_error,
+.comment_error {
+	text-align: right;
 }
 
 .author_error strong,
 .email_error strong,
 .comment_error strong {
-	color: #f2f2f2;
+	color: #333;
 }
 
 

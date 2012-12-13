@@ -23,7 +23,7 @@
 	
 	
 /* COMMENT ERROR HANDLING */
-	var is_logged_in = $('.logged-in-as')[0];
+	var is_logged_in = $('.logged-in-as');
 		
 	var comment_wrapper = $('.comment-notes');
 	var error_box = $('.error_box');
@@ -44,7 +44,7 @@
 	var comment_container = $('.comment-form-comment');
 	
 	
-	console.log(is_logged_in, 'Is the user logged in?');
+	console.log(is_logged_in[0], 'Is the user logged in?');
 	
 /* Event Handling */
 	win.on('submit', '#commentform', function(e){
@@ -53,22 +53,24 @@
 		var email_text = email_field.val();
 		var comment_text = comment_field.val();
 
-		if(!is_logged_in && !author_text || !email_text || !comment_text){
+		
+		if( !author_text || !email_text || !comment_text ){
 			var remove_msgs = [];
 		
-			var is_name_error = $('.name_error');
+			var is_author_error = $('.author_error');
 			var is_email_error = $('.email_error');
 			var is_comment_error = $('.comment_error');
 			
 			var error_box = $('.error_box');
+			var error_msgs = [];
 						
 		/* Name field error handling */
 			if(!author_text){
 			
-				if(!is_name_error[0]){
-					comment_field.css('border', '1px solid rgb(222, 0, 16)');
+				if(!is_author_error[0]){
+					author_field.css('border', '1px solid rgb(222, 0, 16)');
 					
-					html = '<li class="author_error"><strong>ERROR</strong>: please enter your name.</li>';
+					html = '<li class="author_error">Please enter your <strong>name</strong>.</li>';
 				
 					error_box.append(html);					
 				}
@@ -81,9 +83,9 @@
 			if(!email_text){
 			
 				if(!is_email_error[0]){
-					comment_field.css('border', '1px solid rgb(222, 0, 16)');
+					email_field.css('border', '1px solid rgb(222, 0, 16)');
 					
-					html = '<li class="email_error"><strong>ERROR</strong>: please enter your email.</li>';
+					html = '<li class="email_error">Please enter your <strong>email</strong>.</li>';
 				
 					error_box.append(html);
 				}
@@ -98,32 +100,43 @@
 				if(!is_comment_error[0]){
 					comment_field.css('border', '1px solid rgb(222, 0, 16)');
 					
-					html = '<li class="comment_error"><strong>ERROR</strong>: please enter a comment.</li>';
-				
-					error_box.append(html);
+					html = '<li class="comment_error">Please enter a <strong>comment</strong>.</li>';
+					
+					if(!is_logged_in[0]){
+						error_box.append(html);
+					}else{
+						var container = $('.comment-form-comment');
+						container.append('<p class="comment_error_log">Please enter a <strong>comment</strong>.</p>');
+						
+						var error = $('.comment_error_log');
+						error.fadeIn();
+					}
 				}			
 			}else{
 				var error = $('.comment_error');
 				remove_msgs.push(error);
 			}
 			
+			error_msgs = error_box.find('li');
 			
-			var error_msgs = error_box.find('li');
-			
+			/* Make all errors fade in after errors have been found */
 			error_msgs.each(function(index, val){
 				var value_item = $(val);
 				value_item.fadeIn();
 			});
 			
+			/* Remove any errors that no longer exist upon submition */
 			$.each(remove_msgs, function(index, val){
 				var value_item = $(val);
-				value_item.fadeOut();
+				value_item.fadeOut(1000, function(){
+					value_item.remove();
+				});
 			});
 			
 			return false;
 			
 		}else{
-			
+			console.log('Logged');
 		}
 		
 	
