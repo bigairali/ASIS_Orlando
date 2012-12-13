@@ -22,13 +22,14 @@
 	<h3><span class="title-section">Coverage of ASIS News</span></h3>
 	
 <?php /* Beginning of a Wordpress Loop */ ?>
-<?php /* This query is for the Upcoming Events Section of the page */ ?>
+<?php /* This query is for the ASIS Coverage Section of the page */ ?>
 		<?php $coverage_query = new WP_Query('category_name=asis_news&posts_per_page=5'); ?>
 		
 		<?php if ( $coverage_query->have_posts() ) : while ( $coverage_query->have_posts() ) : $coverage_query->the_post(); ?>
 			<div>
-				<h4><?php the_title(); ?><span class="post-author">Posted by <?php the_author(); ?></span></h4>
-			   <?php the_content(); ?>
+				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+			   <?php the_excerpt(); ?>
+			   <p><a href="<?php the_permalink(); ?>">Read More...</a></p>
 			</div>
 		<?php endwhile; endif; ?>
 
@@ -51,7 +52,7 @@
 		
 		<?php if ( $upcoming_query->have_posts() ) : while ( $upcoming_query->have_posts() ) : $upcoming_query->the_post(); ?>
 			<div class="upcoming_post">
-				<h4><span class="upcoming-date"><?=get_field('event_date'); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><span class="post-author">Posted by <?php the_author(); ?></span></h4>
+				<h4><span class="upcoming-date"><?=get_field('event_date'); ?></span><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
 			   <?php the_excerpt(); ?>
 			   <p><a href="<?php the_permalink(); ?>">Read More...</a></p>
 			</div>

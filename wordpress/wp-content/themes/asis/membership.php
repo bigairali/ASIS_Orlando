@@ -22,46 +22,22 @@
 		<?php echo apply_filters('the_content', $page_data->post_content); ?>
 		
 		<h3><span class="title-section">Membership Updates</span></h3>
-		
-		<?php 
-		/* These are the ARGUMENTS for the get_posts PARAMETER */
-			$member_news_args = array(
-							'numberposts' => 5,		/* How many posts to pull */
-							'category' => 6			/* ID of Category */
-							);
-			
-		/* Get posts that match my arguments and put each post in my $MEMBER_NEWS_ARRAY variable */
-			$member_news_array = get_posts( $member_news_args );
-		?>
 
-<!-- FOREACH post in the Member News, make a post of the most recent posts up to a cap of 5 -->
-		<?php 
-		foreach($member_news_array as $member_news_value){
+<?php /* Beginning of a Wordpress Loop */ ?>
+<?php /* This query is for the Membership News Section of the page */ ?>
+		<?php $member_news_query = new WP_Query('category_name=member_updates&posts_per_page=5'); ?>
 		
-			$member_news_post_id = $member_news_value->ID;
-			$member_news_date = get_post_meta($member_news_post_id, 'event_date', true);
-			
-		/* Get the data for the user that posted this message */
-			$member_news_user = get_user_meta( $member_news_value->post_author );
-			
-			$originalDate_member_news = $member_news_value->post_date;
-			$newDate_member_news = date("d M", strtotime($originalDate_member_news));
-			
-		/* This is the HTML template styled for the use of posts */
-			$member_news_template = '<div>
-			<h4><a href="'.$member_news_value->guid.'">'.$member_news_value->post_title.'</a><span class="post-author">Posted on '.$newDate_member_news.' by '.$member_news_user['nickname'][0].'</span></h4>
-			'.apply_filters('the_content', $member_news_value->post_content).'
-			</div>';
-			
-		/* Places the $coverage_TEMPLATE onto the page for each coverage_VALUE in coverage_ARRAY // Max of 5 */
-			echo $member_news_template;					
-		} ?>
-<!-- end of FOREACH -->
+		<?php if ( $member_news_query->have_posts() ) : while ( $member_news_query->have_posts() ) : $member_news_query->the_post(); ?>
+			<div>
+				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+			   <?php the_content(); ?>
+			   <p><a href="<?php the_permalink(); ?>">Add Comment...</a></p>
+			</div>
+		<?php endwhile; endif; ?>	
 	</div>
 	
 	<aside>
 		<h3><span class="title-section">New Members</span></h3>
-		
 		<?php 
 		/* These are the ARGUMENTS for the get_posts PARAMETER */
 			$members_args = array(
@@ -79,14 +55,8 @@
 			$html = "";
 		
 			$members_post_id = $members_value->ID;
-			$members_date = get_post_meta($members_post_id, 'event_date', true);
 			
-		/* Get the data for the user that posted this message */
-			$members_user = get_user_meta( $members_value->post_author );
-			
-			$originalDate_members = $members_value->post_date;
-			$newDate_members = date("d M", strtotime($originalDate_members));
-			
+		/* Each piece of information from a new member */
 			$new_member_name = get_field('new_member_name', $members_post_id);
 			$new_member_title = get_field('new_member_title', $members_post_id);
 			$new_member_phone = get_field('new_member_phone', $members_post_id);
