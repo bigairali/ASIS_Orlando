@@ -4,7 +4,7 @@ Theme URI:
 Description: This is the current stylesheet for ASIS International Orlando Chapter
 Author: Chris J. Whitman
 Author URI: http://www.localitydev.com
-Version: 1.0
+Version: 1.43
 Tags: 
 License: Contact Chris J. Whitman for permission to use elsewhere.
 License URI: 
@@ -151,11 +151,10 @@ p {
 	margin-bottom: 20px;
 	letter-spacing: 0.1em;
 	line-height: 1.5em;
-	overflow: auto;
 }
 
-p:last-child {
-	margin-bottom: 60px;
+p + h2, p + h3, p + h4 {
+	margin-top: 60px;
 }
 
 
@@ -201,7 +200,7 @@ aside h4 a {
 .main_column a:hover, 
 aside a:hover,
 .certifications a:hover {
-	color: #B55600;
+	color: #ea7508;
 }
 
 
@@ -278,7 +277,6 @@ h2 {
 
 	/* Page Dividers */
 h3 {
-	margin-top: 60px;
 	margin-bottom: 15px;
 	border-bottom: 8px solid #333333;
 	letter-spacing: 0.1em;
@@ -303,6 +301,7 @@ iframe {
 em {
 	font-style: italic;
 }
+
 	/* Posted by header */
 .post-author {
 	padding-top: 5px;
@@ -340,7 +339,7 @@ em {
 
 
 
-/* Header Styles ============================================================================ */
+/* Header & Navigation Styles ============================================================================ */
 header {
 	overflow: visible;
 	width: 100%;
@@ -470,9 +469,9 @@ nav ul li .sub-menu {
 	margin-bottom: 40px;
 }
 
-.leo_awards li,
+
 .main_column ul li,
-aside ul li{
+aside ul li {
 	padding-left: 10px;
 	background: url(images/right_arrow.png) no-repeat left 6px;	
 }
@@ -496,9 +495,9 @@ aside li {
 	margin-top: 20px;
 	padding: 10px;
 	padding-top: 12px;
-	background: #CC4F00;
+	background: #EA7508;
 	border-radius: 5px;
-	box-shadow: 0 1px 10px rgba(108,38,0,0.31);
+	box-shadow: 0 2px 2px #8a490b;
 	color: #f7f7f7;
 	font-family: 'droid_sansbold', sans-serif;
 	font-size: 1.6em;
@@ -634,7 +633,8 @@ footer div {
 /* Clearfix */
 .clearfix:after,
 #menu-asis_menu:after,
-.entry-content:after {
+.entry-content:after,
+#content:after {
 	content: ".";
 	display: block;
 	clear: both;
@@ -645,18 +645,21 @@ footer div {
  
 .clearfix,
 #menu-asis_menu,
-.entry-content {
+.entry-content,
+#content {
 	display: inline-block;
 }
  
 html[xmlns] .clearfix,
 html[xmlns] #menu-asis_menu,
-html[xmlns] .entry-content {
+html[xmlns] .entry-content,
+html[xmlns] #content {
 	display: block;
 }
  
 * html .clearfix,
 * html #menu-asis_menu,
-* html .entry-content {
+* html .entry-content,
+* html #content {
 	height: 1%;
 }

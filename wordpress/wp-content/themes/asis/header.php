@@ -28,7 +28,7 @@
 		
 		
 		<!--[if lt IE 9]>
-			<script src="<?php bloginfo('template_url'); ?>js/html5shiv.js"></script>
+			<script src="<?php bloginfo('template_url'); ?>/js/html5shiv.js"></script>
 		<![endif]-->
 	
 	</head>

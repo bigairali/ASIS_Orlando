@@ -37,7 +37,7 @@
 	</div>
 	
 	<aside>
-		<h3><span class="title-section">New Members</span></h3>
+		<h3><span class="title-section">Members</span></h3>
 		<?php 
 		/* These are the ARGUMENTS for the get_posts PARAMETER */
 			$members_args = array(
