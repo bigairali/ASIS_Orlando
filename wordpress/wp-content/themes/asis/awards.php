@@ -30,6 +30,7 @@
 	</div>
 	
 	<aside>
+		<h3><span class="title-section">L.E.O. Awards</span></h3>
  		<img class="leo_award_pic" src="/asis_images/leo_award.png" alt="leo_award" width="292" height="200" />
  		
  		

@@ -39,8 +39,8 @@
 		button: 'Give feedback',
 		label: 'in just 3 minutes'
 		}
-	</script><script type="text/javascript" src="http://cache.usabilla.com/widget/w.js" /></script>	
--->			
+	</script><script type="text/javascript" src="http://cache.usabilla.com/widget/w.js" /></script>		
+-->		
 
 </body>
 </html>

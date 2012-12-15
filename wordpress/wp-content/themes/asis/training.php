@@ -23,15 +23,19 @@
 	<div class="main_column">
 		<?php echo apply_filters('the_content', $page_data->post_content); ?>
 		
-		<?php /* Query only posts with the category ID of 10 [Training] */ ?>
-		<?php query_posts('cat=10'); ?>
+<?php /* Beginning of a Wordpress Loop */ ?>
+<?php /* This query is for the Membership News Section of the page */ ?>
+		<?php $training_query = new WP_Query('category_name=training&posts_per_page=10'); ?>
 		
-		<?php add_action( 'pre_get_posts', 'function_name' ); ?>
-		
-		<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-			<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a><span class="post-author">Posted <?php the_time(); ?> by <?php the_author(); ?></span></h4>
-		   <?php the_excerpt(); ?>
+		<?php if ( $training_query->have_posts() ) : while ( $training_query->have_posts() ) : $training_query->the_post(); ?>
+			<div>
+				<h4><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h4>
+			   <?php the_excerpt(); ?>
+			   <p><a href="<?php the_permalink(); ?>">Read more...</a></p>
+			</div>
 		<?php endwhile; endif; ?>
+		
+		
 
 
 	</div>

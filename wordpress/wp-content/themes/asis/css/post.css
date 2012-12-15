@@ -24,8 +24,16 @@ h5 {
 
 #comments {
 	padding-bottom: 100px;
+	}
+
+#comments div {
+	margin: 0;
 }
 
+#comments li {
+	background-image: none;
+	font-size: 1em;
+}
 
 #comments-list > ul, #respond {
 	width: 528px;
@@ -64,7 +72,7 @@ h5 {
 
 /* User's comment */
 .comment-content {
-	font-size: 1.6em;
+/* 	font-size: 1.6em; */
 }
 
 .comment-reply-link {
