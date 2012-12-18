@@ -260,7 +260,7 @@ aside p {
 }
 
 strong {
-	color: #003366;
+	color: #333;
 	font-family: 'droid_sansbold';
 	font-size: 1.2em;
 }
@@ -483,8 +483,7 @@ aside ul li {
 }
 
 .leo_awards li,
-.main_column li,
-aside li {
+.security_links li {
 	margin-bottom: 10px;
 	padding-left: 10px;
 	font-size: 1.6em;
@@ -627,6 +626,7 @@ footer div {
 .creative {
 	padding-top: 20px;
 }
+
 
  
 

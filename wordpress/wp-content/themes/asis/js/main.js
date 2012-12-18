@@ -20,6 +20,7 @@
 		}
 	});
 	
+	console.log(win);
 	
 	
 /* COMMENT ERROR HANDLING */
@@ -44,22 +45,26 @@
 	var comment_container = $('.comment-form-comment');
 	
 	
-	console.log(is_logged_in[0], 'Is the user logged in?');
+	console.log(is_logged_in[0], comment_field.val());
+	console.log($('#commentform')[0]);
 	
 /* Event Handling */
-	win.on('submit', '#commentform', function(e){
+	var post_form = $('#commentform');
+	
+	post_form.on('submit', function(){
+		console.log('Comment Form');
 		
 		var author_text = author_field.val();
 		var email_text = email_field.val();
 		var comment_text = comment_field.val();
-
 		
-		if( !author_text || !email_text || !comment_text ){
+		if(!author_text || !email_text || !comment_text ){
 			var remove_msgs = [];
 		
 			var is_author_error = $('.author_error');
 			var is_email_error = $('.email_error');
 			var is_comment_error = $('.comment_error');
+			var is_comment_error_log = $('.comment_error_log');
 			
 			var error_box = $('.error_box');
 			var error_msgs = [];
@@ -68,13 +73,15 @@
 			if(!author_text){
 			
 				if(!is_author_error[0]){
-					author_field.css('border', '1px solid rgb(222, 0, 16)');
+					author_field.css('border', '2px inset rgb(222, 0, 16)');
 					
 					html = '<li class="author_error">Please enter your <strong>name</strong>.</li>';
 				
 					error_box.append(html);					
 				}
 			}else{
+				author_field.css('border', '2px inset #EEE');
+
 				var error = $('.author_error');
 				remove_msgs.push(error);
 			}
@@ -83,13 +90,15 @@
 			if(!email_text){
 			
 				if(!is_email_error[0]){
-					email_field.css('border', '1px solid rgb(222, 0, 16)');
+					email_field.css('border', '2px inset rgb(222, 0, 16)');
 					
 					html = '<li class="email_error">Please enter your <strong>email</strong>.</li>';
 				
 					error_box.append(html);
 				}
 			}else{
+				email_field.css('border', '2px inset #EEE');
+			
 				var error = $('.email_error');
 				remove_msgs.push(error);
 			}
@@ -98,13 +107,13 @@
 			if(!comment_text){
 			
 				if(!is_comment_error[0]){
-					comment_field.css('border', '1px solid rgb(222, 0, 16)');
+					comment_field.css('border', '2px inset rgb(222, 0, 16)');
 					
 					html = '<li class="comment_error">Please enter a <strong>comment</strong>.</li>';
 					
 					if(!is_logged_in[0]){
 						error_box.append(html);
-					}else{
+					}else if(!is_comment_error_log[0]){
 						var container = $('.comment-form-comment');
 						container.append('<p class="comment_error_log">Please enter a <strong>comment</strong>.</p>');
 						
@@ -115,6 +124,8 @@
 			}else{
 				var error = $('.comment_error');
 				remove_msgs.push(error);
+				
+				comment_field.css('border', 'none');
 			}
 			
 			error_msgs = error_box.find('li');
@@ -138,15 +149,13 @@
 		}else{
 			console.log('Logged');
 		}
-		
-	
-	
-		
-		
 
+		
 	});
-	
-	
+
+
+
+		
 	
 	
 	

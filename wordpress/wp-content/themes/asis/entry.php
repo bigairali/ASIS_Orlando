@@ -12,7 +12,7 @@ get_template_part( 'entry-footer' );
 ?>
 
 
-<?php /* get_template_part( 'entry', 'meta' ); */ ?>
+<?php get_template_part( 'entry', 'meta' ); ?>
 
 
 <?php

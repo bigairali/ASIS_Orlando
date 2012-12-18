@@ -13,12 +13,40 @@ h5 {
 }
 
 .entry-content {
-	margin: 40px 0;
+}
+
+.main_column p {
+	font-size: 1em;
+}
+
+.post p {
+	font-size: 1.6em;
+}
+
+.main_column ul li, aside ul li {
+	padding-left: 0;
+	background: none;
+	font-size: 1em;
+}
+
+/* Gallery fix */
+.ngg-galleryoverview div {
+	margin-bottom: 0;
+}
+
+/* Other Posts */
+#post_list li {
+	margin-bottom: 10px;
+	font-size: 1.4em;
+}
+
+.current_post {
+	padding-left: 15px;
+	background: url(../images/right_arrow.png) no-repeat 5px 2px;
 }
 
 /* Border between each comment */
 #comments-list {
-
 	border-top: 1px dashed #333;
 }
 
@@ -27,12 +55,12 @@ h5 {
 	}
 
 #comments div {
-	margin: 0;
+	margin-bottom: 5px;
 }
 
-#comments li {
-	background-image: none;
-	font-size: 1em;
+.comment-content {
+	margin-top: 10px;
+	font-size: 1.4em;
 }
 
 #comments-list > ul, #respond {
@@ -67,48 +95,24 @@ h5 {
 .comment-meta {
 	margin-bottom: 10px;
 }
-	/* end */
-
-
-/* User's comment */
-.comment-content {
-/* 	font-size: 1.6em; */
-}
 
 .comment-reply-link {
 	margin-top: 20px;
 /* 	text-align: right; */
 }
-
-
-/* Post a comment */
-#reply-title {
-	margin-bottom: 5px;
-	font-family: 'droid_sansbold', sans-serif;
-	font-size: 2.0em;
-	position: relative;
-}
-
-#reply-title a {
-	font-size: 80%;
-	letter-spacing: 0;
-	position: absolute;
-	top: 8px;
-	right: 100px;
-}
-
-#reply-title #cancel-comment-reply-link {
-	top: 8px;
-	right: 0;
-}
-
-
+\
 .logged-in-as {
 	margin-bottom: 20px;
 }
 
 label {
 	display: block;
+}
+
+
+input[type="text"],
+textarea {
+	border: 2px inset #EEE;
 }
 
 textarea {
@@ -140,27 +144,37 @@ textarea {
 	background: ;
 }
 
+/* Post a comment */
 #reply-title {
+	margin-bottom: 5px;
+	font-family: 'droid_sansbold', sans-serif;
+	font-size: 2.0em;
 	position: relative;
 }
 
-#reply-title small {
-	font-size: 0.5em;
-	letter-spacing: 0.1em;
-	display: block;
+#reply-title a {
+	letter-spacing: 0;
+	top: 8px;
+	right: 100px;
 	position: absolute;
-	top: 9px;
-	right: 0;
-	
 }
 
+#reply-title #cancel-comment-reply-link {
+	top: 8px;
+	right: 0;
+}
+
+/* Search Field */
+#search-inputs {
+	margin-bottom: 20px;
+}
 
 /* Post a Comment Button */
 #submit {
-	padding: 10px 20px;
+	padding: 5px 20px;
 	color: #333;
 	font-family: 'droid_sansbold';
-	font-size: 1em;
+	font-size: 1.4em;
 	border-radius: 10px;
 }
 
@@ -184,14 +198,15 @@ textarea {
 	z-index: 200;
 }
 
-.author_error,
-.email_error,
-.comment_error,
+.error_box .author_error,
+.error_box .email_error,
+.error_box .comment_error,
 .comment_error_log {
 	padding: 10px 0;
 	color: rgb(222, 0, 16);
 	display: none;
 	background: url(../images/error.png) no-repeat left center;
+	font-size: 1em;
 }
 
 .comment_error_log {

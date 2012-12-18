@@ -10,5 +10,5 @@
 <?php endwhile; ?>
 <?php get_template_part( 'nav', 'below' ); ?>
 </div>
-<?php get_sidebar(); ?>
+<?php /* get_sidebar(); */ ?>
 <?php get_footer(); ?>
