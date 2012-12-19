@@ -190,6 +190,7 @@ h6 a {
 aside a,
 .certifications a {
 	color: #003366;
+	line-height: 1.4em;
 }
 
 .main_column h4 a,
@@ -212,7 +213,7 @@ aside a:hover,
 #container {
 	width: 960px;
 	margin: 0 auto;
-	padding: 0 30px 10px;
+	padding: 0 30px 30px;
 	background-color: #003366;
 	box-shadow: 0px 0px 40px 4px #001122;
 }
@@ -483,7 +484,9 @@ aside ul li {
 }
 
 .leo_awards li,
-.security_links li {
+.security_links li,
+.main_column > ul li,
+aside > ul li {
 	margin-bottom: 10px;
 	padding-left: 10px;
 	font-size: 1.6em;
@@ -552,7 +555,8 @@ cite {
 /* Footer Styles ============================================================================ */
 
 footer {
-	margin-top: 10px;
+	width: 1020px;
+	margin: 10px auto;
 	padding-bottom: 20px;
 	overflow: hidden;
 }
@@ -609,6 +613,8 @@ footer div {
 }
 
 
+
+
 /* News Posts Styling */
 .alignleft {
 	margin-right: 10px;
@@ -628,13 +634,14 @@ footer div {
 }
 
 
- 
 
 /* Clearfix */
 .clearfix:after,
 #menu-asis_menu:after,
 .entry-content:after,
-#content:after {
+#content:after,
+#search-inputs:after,
+.navigation:after {
 	content: ".";
 	display: block;
 	clear: both;
@@ -646,20 +653,25 @@ footer div {
 .clearfix,
 #menu-asis_menu,
 .entry-content,
-#content {
+#content,
+.navigation {
 	display: inline-block;
 }
  
 html[xmlns] .clearfix,
 html[xmlns] #menu-asis_menu,
 html[xmlns] .entry-content,
-html[xmlns] #content {
+html[xmlns] #content,
+html[xmlns] #search-inputs,
+html[xmlns] .navigation {
 	display: block;
 }
  
 * html .clearfix,
 * html #menu-asis_menu,
 * html .entry-content,
-* html #content {
+* html #content,
+* html #search-inputs,
+* html .navigation {
 	height: 1%;
 }

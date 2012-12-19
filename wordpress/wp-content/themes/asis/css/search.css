@@ -1,0 +1,44 @@
+/* Archive Search Style Sheet */
+
+h4 {
+	margin-bottom: 0;
+}
+
+.page-title {
+	margin-bottom: 40px;
+}
+
+.main_column .entry-meta {
+	margin-bottom: 20px;
+}
+
+.main_column div {
+	margin-bottom: 0;
+}
+
+.main_column .read_more {
+	margin-bottom: 0;
+	font-size: 1.2em;
+}
+
+.page, .post {
+	padding: 20px 0;
+	border-top: 1px dashed #333;
+}
+
+.navigation {
+	width: 100%;
+	font-size: 1.2em;
+}
+
+#nav-below {
+	border-top: 1px dashed #333;
+}
+
+.nav-previous {
+	float: right;
+}
+
+.nav-next {
+	float: left;
+}

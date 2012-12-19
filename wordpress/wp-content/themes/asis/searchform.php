@@ -13,7 +13,8 @@
 <form method="get" id="searchform" action="<?php echo home_url( '/' ); ?>">
 <div id="search-inputs">
 <input type="text" value="" name="s" id="s" />
-<input type="hidden" value="<?=$cat_ID; ?>" name="cat" id="scat" />
+<input type="hidden" value="-8" name="cat" id="scat" />
+<input type="hidden" value="post" name="post_type" id="spost" />
 <input type="submit" id="searchsubmit" value="Search" />
 </div>
 </form>

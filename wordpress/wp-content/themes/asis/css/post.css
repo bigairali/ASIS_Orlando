@@ -42,7 +42,7 @@ h5 {
 
 .current_post {
 	padding-left: 15px;
-	background: url(../images/right_arrow.png) no-repeat 5px 2px;
+	background: url(../images/right_arrow.png) no-repeat 5px 6px;
 }
 
 /* Border between each comment */
@@ -165,8 +165,13 @@ textarea {
 }
 
 /* Search Field */
-#search-inputs {
-	margin-bottom: 20px;
+#s {
+	width: 75%;
+}
+
+#searchsubmit {
+	float: right;
+	display: inline-block;
 }
 
 /* Post a Comment Button */
@@ -185,8 +190,13 @@ textarea {
 
 /* Error Handling Styles */
 .comment-notes {
+	font-size: 1em;
 	position: relative;
 	overflow: visible;
+}
+
+aside .comment-notes {
+	margin-bottom: 0;
 }
 
 .error_box {

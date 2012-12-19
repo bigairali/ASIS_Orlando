@@ -26,6 +26,11 @@
 			<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/certification.css" />
 		<?php } ?>
 		
+		<?php /* if the current page is a view of a ARCHIVE page then load this CSS */ ?>
+		<?php if(is_search()) { ?>
+			<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url'); ?>/css/search.css" />
+		<?php } ?>
+		
 		
 		<!--[if lt IE 9]>
 			<script src="<?php bloginfo('template_url'); ?>/js/html5shiv.js"></script>

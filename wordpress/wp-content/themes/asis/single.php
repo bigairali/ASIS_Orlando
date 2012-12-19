@@ -4,12 +4,16 @@
 
 	<?php 
 		
-	/* Post ID number */
+		/* ID of the current page */
 		$page_id = get_the_ID(); 
 		
+		/* Category Information for the current ID */
 		$category_info = get_the_category($page_id);
+		
+		/* ID of the current category for this page */
 		$cat_ID = $category_info[0]->cat_ID;
-		var_dump($cat_ID);
+		
+		/* Slug of the current category for this page */
 		$slug = $category_info[0]->slug;
 		
 	?>
@@ -22,10 +26,11 @@
 	</div>
 	
 	<aside>
-		<h3>More Articles</h3>
+		<h3>Recent Posts</h3>
+		<p class="comment-notes">Search more articles in this category.</p>
 <?php /* Beginning of a Wordpress Loop */ ?>
 <?php /* This query is for the ASIS Coverage Section of the page */ ?>
-		<?php $single_query = new WP_Query('category_name='.$slug.'&posts_per_page=5'); ?>
+		<?php $single_query = new WP_Query('category_name='.$slug.'&posts_per_page=15'); ?>
 		<?php get_search_form(); ?>
 	
 		<ul id="post_list">
@@ -34,6 +39,7 @@
 			<li <? if($page_id == $current_id) echo 'class="current_post"'; ?>><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
 		<?php endwhile; endif; ?>
 		</ul>
+		
 			
 	</aside>
 

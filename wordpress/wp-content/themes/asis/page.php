@@ -18,5 +18,4 @@ the_post_thumbnail();
 </div>
 <?php comments_template( '', true ); ?>
 </article>
-<!-- <?php get_sidebar(); ?> -->
 <?php get_footer(); ?>
