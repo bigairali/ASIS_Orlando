@@ -19,11 +19,19 @@
 			val.html(new_header);
 		}
 	});
+		
+	var navigation = $('#menu-asis_menu > li');
+	var nav_length = navigation.length;
 	
-	console.log(win);
+	console.log(nav_length);
 	
+	if(nav_length > 4){
+		var the_nav = $('nav');
+		the_nav.toggleClass('default-nav').addClass('extended-nav');
+	}
+
 	
-/* COMMENT ERROR HANDLING */
+/* COMMENT ERROR HANDLING --- [BEGIN] */
 	var is_logged_in = $('.logged-in-as');
 		
 	var comment_wrapper = $('.comment-notes');
@@ -45,8 +53,10 @@
 	var comment_container = $('.comment-form-comment');
 	
 	
+/*
 	console.log(is_logged_in[0], comment_field.val());
 	console.log($('#commentform')[0]);
+*/
 	
 /* Event Handling */
 	var post_form = $('#commentform');
@@ -152,7 +162,7 @@
 
 		
 	});
-
+/* COMMENT ERROR HANDLING --- [END] */
 
 
 		

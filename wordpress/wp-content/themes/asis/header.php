@@ -48,7 +48,7 @@
 			<header class="clearfix">
 				<h1><a href="<?php echo home_url() ?>/" title="<?php bloginfo( 'name' ) ?>" rel="home"><?php bloginfo( 'name' ) ?></a></h1>
 			
-				<nav>
+				<nav class="default-nav">
 					<?php wp_nav_menu(array( 'menu' => 'asis_menu'));?>
 				</nav><!-- /#nav  -->
 			</header><!-- /header -->
