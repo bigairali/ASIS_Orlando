@@ -34,7 +34,7 @@
 /* COMMENT ERROR HANDLING --- [BEGIN] */
 	var is_logged_in = $('.logged-in-as');
 		
-	var comment_wrapper = $('.comment-notes');
+	var comment_wrapper = $('.main_column .comment-notes');
 	var error_box = $('.error_box');
 			
 	if(!error_box[0]){
@@ -51,18 +51,31 @@
 	var author_container = $('.comment-form-author');
 	var email_container = $('.comment-form-email');
 	var comment_container = $('.comment-form-comment');
-	
-	
-/*
-	console.log(is_logged_in[0], comment_field.val());
-	console.log($('#commentform')[0]);
-*/
+
 	
 /* Event Handling */
+	var search_form = $('#searchform');
 	var post_form = $('#commentform');
 	
+	console.log(search_form[0]);
+	
+	search_form.on('submit', function(){
+	
+		var search_field = $('#s');
+		var search_input = search_field.val();
+		
+		console.log('This is the value', search_input);
+		
+		if(search_input === ""){
+			search_field.css('border', '2px inset rgb(222, 0, 16)');
+			
+			return false;
+		}
+		
+		console.log('Search Touched');
+	});
+	
 	post_form.on('submit', function(){
-		console.log('Comment Form');
 		
 		var author_text = author_field.val();
 		var email_text = email_field.val();
@@ -156,8 +169,6 @@
 			
 			return false;
 			
-		}else{
-			console.log('Logged');
 		}
 
 		

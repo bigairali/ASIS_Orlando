@@ -533,7 +533,10 @@ h1 a {
 		z-index: 100;
 	}
 
-
+	.extended-nav #menu-asis_menu > .current_page_item > a,
+	.extended-nav #menu-asis_menu > .current-page-ancestor > a {
+		background: #369;
+	}
 
 
 

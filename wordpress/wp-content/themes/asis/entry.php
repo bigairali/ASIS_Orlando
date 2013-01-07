@@ -1,17 +1,6 @@
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <h4 class="entry-title"><?php the_title(); ?></h4>
 
-<?php 
-/*
-if ( is_single() ) {
-get_template_part( 'entry-footer', 'single' ); 
-} else {
-get_template_part( 'entry-footer' ); 
-}
-*/
-?>
-
-
 <?php get_template_part( 'entry', 'meta' ); ?>
 
 
