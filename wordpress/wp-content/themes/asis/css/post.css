@@ -12,8 +12,6 @@ h5 {
 	margin: 5px 0;
 }
 
-.entry-content {
-}
 
 .main_column p {
 	font-size: 1em;
@@ -27,6 +25,10 @@ h5 {
 	padding-left: 0;
 	background: none;
 	font-size: 1em;
+}
+
+.main_column .children {
+	margin-bottom: 0;
 }
 
 /* Gallery fix */
@@ -52,6 +54,8 @@ h5 {
 
 #comments {
 	padding-bottom: 100px;
+	font-size: 1.4em;
+	line-height: 1.1em;
 	}
 
 #comments div {
@@ -166,7 +170,7 @@ textarea {
 
 /* Search Field */
 #s {
-	width: 75%;
+	width: 72%;
 }
 
 #searchsubmit {
@@ -177,7 +181,8 @@ textarea {
 /* Post a Comment Button */
 #submit {
 	padding: 5px 20px;
-	color: #333;
+	background: #EA7508;
+	color: #f7f7f7;
 	font-family: 'droid_sansbold';
 	font-size: 1.4em;
 	border-radius: 10px;
@@ -200,7 +205,7 @@ aside .comment-notes {
 }
 
 .error_box {
-	width: 170px;
+	width: 220px;
 	margin-top: 20px;
 	top: 100%;
 	position: absolute;
@@ -211,11 +216,12 @@ aside .comment-notes {
 .error_box .author_error,
 .error_box .email_error,
 .error_box .comment_error,
+.error_box .email_nonvalid,
 .comment_error_log {
-	padding: 10px 0;
+	padding: 5px 20px 5px 0;
 	color: rgb(222, 0, 16);
 	display: none;
-	background: url(../images/error.png) no-repeat left center;
+	background: url(../images/error.png) no-repeat right center;
 	font-size: 1em;
 }
 
@@ -225,13 +231,15 @@ aside .comment-notes {
 
 .author_error,
 .email_error,
-.comment_error {
+.comment_error,
+.email_nonvalid {
 	text-align: right;
 }
 
 .author_error strong,
 .email_error strong,
-.comment_error strong {
+.comment_error strong,
+.email_nonvalid {
 	color: #333;
 }
 

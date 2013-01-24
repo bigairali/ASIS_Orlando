@@ -217,7 +217,7 @@ aside a:hover,
 
 /* White Background */
 #main {
-	background-color: #f7f7f7;
+	background-color: #fafafa;
 	padding-bottom: 100px;
 }
 
@@ -260,7 +260,6 @@ aside p {
 strong {
 	color: #333;
 	font-family: 'droid_sansbold';
-	font-size: 1.2em;
 }
 
 
@@ -316,7 +315,7 @@ em {
 	padding: 8px;
 	padding-bottom: 1px;
 	background: #333333;
-	color: #f7f7f7;
+	color: #fafafa;
 	font-family: 'droid_sansbold', sans-serif;
 	font-size: 14px;
 	display: inline-block;
@@ -393,9 +392,10 @@ h1 a {
 		position: relative;
 	}
 	
+	
 	.default-nav #menu-asis_menu > li > a {
 		padding: 30px 0 10px;
-		border-top: 8px solid #f7f7f7;
+		border-top: 8px solid #fafafa;
 		display: block;
 		
 		/* transitions */
@@ -410,16 +410,20 @@ h1 a {
 	}
 	
 	
+	
+	.sub-menu .current_page_item a {
+		background-color: #333;
+	}
+	
 	/* Active State */
 	.default-nav #menu-asis_menu > .current_page_item > a,
 	.default-nav #menu-asis_menu > .current-page-ancestor > a {
 		border-top: 8px solid #003366;
 	}
 	
-	.sub-menu .current_page_item a {
-		background-color: #333;
+	.downarrow {
+		background: url("images/down_arrow.png") no-repeat center bottom;
 	}
-	
 	
 	/* The Sub Navigation Styling */
 	
@@ -448,7 +452,7 @@ h1 a {
 	}
 	
 	.sub-menu > li {
-		border-top: 1px solid #f2f2f2;
+		border-top: 1px solid #fafafa;
 		white-space: nowrap;
 	}
 	
@@ -478,19 +482,15 @@ h1 a {
 	}
 	
 	.extended-nav a {
-		color: #f7f7f7;
+		color: #fafafa;
 		font-size: 1.8em;
-	}
-
-	.extended-nav #menu-asis_menu {
-		float: right;
 	}
 
 	.extended-nav #menu-asis_menu > li {
 		font-family: 'droid_sansbold', sans-serif;
 		float: left;
 		position: relative;
-		border-left: 1px solid #f7f7f7;
+		border-right: 1px solid #fafafa;
 	}
 	
 	.extended-nav #menu-asis_menu > li > a {
@@ -506,7 +506,7 @@ h1 a {
 	
 	.extended-nav #menu-asis_menu > li:hover > a {
 		background: #21476e;
-		color: #f7f7f7;
+		color: #fafafa;
 	}
 	
 	.extended-nav ul li .sub-menu {
@@ -538,18 +538,6 @@ h1 a {
 		background: #369;
 	}
 
-
-
-
-
-	
-
-/* .menu-item-22 is Wordpress's class for ABOUT */
-/* .menu-item-21 is Wordpress's class for MEMBERSHIP */
-.menu-item-22,
-.menu-item-21 {
-	background: url(images/down_arrow.png) no-repeat center bottom;
-}
 
 
 
@@ -588,7 +576,7 @@ aside > ul li {
 	background: #EA7508;
 	border-radius: 5px;
 	box-shadow: 0 2px 2px #8a490b;
-	color: #f7f7f7;
+	color: #fafafa;
 	font-family: 'droid_sansbold', sans-serif;
 	font-size: 1.6em;
 	letter-spacing: 0;
@@ -673,7 +661,7 @@ footer div {
 	
 
 footer a {
-	color: #f7f7f7;
+	color: #fafafa;
 }
 
 footer a:hover {
@@ -725,6 +713,7 @@ footer div {
 
 /* Clearfix */
 .clearfix:after,
+#main:after,
 .menu-asis_menu-container:after,
 .default-nav #menu-asis_menu:after,
 .extended-nav #menu-asis_menu:after,
@@ -742,14 +731,15 @@ footer div {
  
 
 .default-nav #menu-asis_menu,
-.extended-nav #menu-asis_menu,
 .entry-content,
 #content,
-.navigation {
+.navigation,
+#main {
 	display: inline-block;
 }
  
 html[xmlns] .clearfix,
+html[xmlns] #main,
 html[xmlns] .default-nav #menu-asis_menu,
 html[xmlns] .extended-nav #menu-asis_menu,
 html[xmlns] .entry-content,
@@ -760,6 +750,7 @@ html[xmlns] .navigation {
 }
  
 * html .clearfix,
+* html #main,
 * html .menu-asis_menu-container,
 * html .default-nav #menu-asis_menu,
 * html .extended-nav #menu-asis_menu,

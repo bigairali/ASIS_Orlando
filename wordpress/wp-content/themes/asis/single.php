@@ -1,5 +1,4 @@
 <?php get_header(); ?>
-
 <img class="header_image" src="/asis_images/sub_lake_eola.jpg" alt="Different angle of Lake Eola" width="960" height="160" />
 
 	<?php 
@@ -25,14 +24,16 @@
 		<?php endwhile; endif; ?>
 	</div>
 	
+	
+	
 	<aside>
-		<h3>Recent Posts</h3>
 		<p class="comment-notes">Search more articles in this category.</p>
 <?php /* Beginning of a Wordpress Loop */ ?>
 <?php /* This query is for the ASIS Coverage Section of the page */ ?>
 		<?php $single_query = new WP_Query('category_name='.$slug.'&posts_per_page=15'); ?>
 		<?php get_search_form(); ?>
 	
+		<h3>Recent Posts</h3>
 		<ul id="post_list">
 		<?php if ( $single_query->have_posts() ) : while ( $single_query->have_posts() ) : $single_query->the_post(); ?>
 		<?php $current_id = get_the_ID(); ?>

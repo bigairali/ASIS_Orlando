@@ -1522,17 +1522,20 @@ function comment_form( $args = array(), $post_id = null ) {
 	$aria_req = ( $req ? " aria-required='true'" : '' );
 	$fields =  array(
 		'author' => '<p class="comment-form-author">' . '<label for="author">' . __( 'Name' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-		            '<input id="author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
+		            '<input id="author" name="author" placeholder="John Doe" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
 		'email'  => '<p class="comment-form-email"><label for="email">' . __( 'Email' ) . ( $req ? ' <span class="required">*</span>' : '' ) . '</label> ' .
-		            '<input id="email" name="email" placeholder="example@domain.com" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
+		            '<input id="email" name="email" placeholder="example@domain.com" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>'
+/*
+,
 		'url'    => '<p class="comment-form-url"><label for="url">' . __( 'Website' ) . '</label>' .
 		            '<input id="url" name="url" placeholder="http://www.asisorlando.org" type="text" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>',
+*/
 	);
 
 	$required_text = sprintf( ' ' . __('Required fields are marked %s'), '<span class="required">*</span>' );
 	$defaults = array(
 		'fields'               => apply_filters( 'comment_form_default_fields', $fields ),
-		'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) . '</label><textarea id="comment" placeholder="Enter your comment here." name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
+		'comment_field'        => '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment<span class="required">*</span>', 'noun' ) . '</label><textarea id="comment" placeholder="Enter your comment here." name="comment" cols="45" rows="8" aria-required="true"></textarea></p>',
 		'must_log_in'          => '<p class="must-log-in">' . sprintf( __( 'You must be <a href="%s">logged in</a> to post a comment.' ), wp_login_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
 		'logged_in_as'         => '<p class="logged-in-as">' . sprintf( __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ), get_edit_user_link(), $user_identity, wp_logout_url( apply_filters( 'the_permalink', get_permalink( $post_id ) ) ) ) . '</p>',
 		'comment_notes_before' => '<p class="comment-notes">' . __( 'Your email address will not be published.' ) . ( $req ? $required_text : '' ) . '</p>',
