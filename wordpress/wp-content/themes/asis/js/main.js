@@ -86,7 +86,8 @@
 			return false;
 		}
 	});
-	
+
+/* On submit action for comment form */	
 	post_form.on('submit', function(){
 		
 		var author_text = author_field.val();
@@ -190,7 +191,7 @@
 				var error = $('.comment_error');
 				remove_msgs.push(error);
 				
-				comment_field.css('border', 'none');
+				comment_field.css('border', '2px inset #EEE');
 			}
 			
 			error_messaging();

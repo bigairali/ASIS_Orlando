@@ -1,6 +1,10 @@
 <?php get_header(); ?>		<!-- Get the header of the page and insert it here -->
 
-<img src="/asis_images/main_photo.jpg" width="960" height="300" alt="Picture of Lake Eola that represents Orlando" />
+
+
+<!-- <img src="/asis_images/main_photo.jpg" width="960" height="300" alt="Picture of Lake Eola that represents Orlando" /> -->
+<?php if(function_exists('wp_content_slider')) { wp_content_slider(); } ?>
+
 			
 <div class="main_column">
 
