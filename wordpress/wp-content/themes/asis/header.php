@@ -40,6 +40,10 @@
 	
 	<body <?php body_class(); ?>>
 	
+	<div id="feedback">
+		<a href=" https://docs.google.com/spreadsheet/viewform?formkey=dHhnY1BwVzZKSE5MRXh3ZnlpQk03Q2c6MQ"><img src="<?php bloginfo('template_url'); ?>/images/give_feedback.png"></a>
+	</div>
+	
 	<?php /* Blue background */ ?>
 	<div id="container">
 		

@@ -333,7 +333,11 @@ em {
 	display: inline-block;
 }
 
-
+#feedback {
+	position: fixed;
+	bottom: -10px;
+	left: 30px;
+}
 
 
 /* Header & Navigation Styles ============================================================================ */
